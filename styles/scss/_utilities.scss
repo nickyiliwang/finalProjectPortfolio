@@ -1,0 +1,49 @@
+// variables
+
+// font colours
+$primaryYellow: #ffd300;
+$primaryBlack: #0f0f0f;
+$primaryWhite: #ffffff;
+
+// background colors
+$primaryBackgroundBlack: #171b0e;
+$primaryBackgroundPine: #2b331b;
+$primaryBackgroundGreen: #364419;
+
+// mixins
+
+// Centering
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// font sizes turn into rem values
+@mixin fontSize($sizeValue) {
+  font-size: $sizeValue * 1px;
+  font-size: ($sizeValue/10) * 1rem / 2;
+}
+
+// media queries
+@mixin mq($args...) {
+  $media-type: "only screen";
+  $media-type-key: "media-type";
+  $args: keywords($args);
+  $expr: "";
+
+  @if map-has-key($args, $media-type-key) {
+    $media-type: map-get($args, $media-type-key);
+    $args: map-remove($args, $media-type-key);
+  }
+
+  @each $key, $value in $args {
+    @if $value {
+      $expr: "#{$expr} and (#{$key}: #{$value})";
+    }
+  }
+
+  @media #{$media-type} #{$expr} {
+    @content;
+  }
+}
