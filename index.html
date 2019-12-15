@@ -16,13 +16,13 @@
   </head>
   <body>
     <!-- skip-link -->
-    <a tabindex="0" href="#mainContent" class="skip-link"
+    <a tabindex="0" href="#main-content" class="skip-link"
       >Skip to main content.</a
     >
     <!-- header -->
     <header id="home">
-      <!-- desktopNav -->
-      <nav class="desktopNav">
+      <!-- desktop-nav -->
+      <nav class="desktop-nav">
         <div class="wrapper flexContainer">
           <div class="logo-icon">
             <h2>NW</h2>
@@ -37,9 +37,9 @@
           </div>
         </div>
       </nav>
-      <!-- end of desktopNav -->
-      <!-- hamburgerNav -->
-      <nav aria-hidden="true" class="hamburgerNav">
+      <!-- end of desktop-nav -->
+      <!-- hamburger-nav -->
+      <nav aria-hidden="true" class="hamburger-nav">
         <div class="wrapper">
           <div class="menuToggle">
             <input type="checkbox" id="toggle" name="toggle" />
@@ -55,7 +55,7 @@
           </div>
         </div>
       </nav>
-      <!-- end of hamburgerNav -->
+      <!-- end of hamburger-nav -->
       <div class="wrapper">
         <h1>Hello! I'm Nick,</h1>
         <h2>
@@ -69,7 +69,7 @@
         <span id="typed"></span>
       </div>
       <!-- scroll down arrow -->
-      <a href="#mainContent">
+      <a href="#main-content">
         <svg class="arrows bounce">
           <path class="a1" d="M0 0 L30 32 L60 0"></path>
           <path class="a2" d="M0 20 L30 52 L60 20"></path>
@@ -79,30 +79,39 @@
     </header>
     <!-- end of header -->
     <!-- main -->
-    <main id="mainContent">
+    <main id="main-content">
       <section class="about" id="about">
         <div class="wrapper">
           <h2>About Me</h2>
           <div class="split">
-            <div class="aboutMe">
+            <div class="about-me">
               <div class="imageContainer">
                 <img
                   src="./assets/nick-front.webp"
-                  alt="Nick wang photo-shoot, young man smiling standing"
+                  alt="Nick photo-shoot, young man smiling standing"
+                  class="front-image"
+                />
+                <img
+                  src="./assets/nick-back.png"
+                  alt="Nick holding a cute cat, this young man seems very happy"
+                  class="back-image"
                 />
               </div>
-              <h3>Bio:</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum,
-                vel molestias sit numquam repudiandae expedita consequuntur
-                laudantium ipsa rerum quia tempora mollitia, deserunt
-                reprehenderit. Veniam vitae aut aperiam dolorum voluptatum quia
-                mollitia dolor maiores nulla provident! Quo totam animi
-                veritatis.
-              </p>
+              <!-- end of image container -->
+              <div class="content">
+                <h3>Bio:</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Harum, vel molestias sit numquam repudiandae expedita
+                  consequuntur laudantium ipsa rerum quia tempora mollitia,
+                  deserunt reprehenderit. Veniam vitae aut aperiam dolorum
+                  voluptatum quia mollitia dolor maiores nulla provident! Quo
+                  totam animi veritatis.
+                </p>
+              </div>
             </div>
             <!-- end of about me -->
-            <div class="mySkills">
+            <div class="my-skills">
               <ul>
                 <li><i class="fab fa-html5"></i></li>
                 <li><i class="fab fa-css3-alt"></i></li>
@@ -252,9 +261,9 @@
           document.body.scrollTop > 80 ||
           document.documentElement.scrollTop > 80
         ) {
-          document.querySelector(".hamburgerNav").style.display = "block";
+          document.querySelector(".hamburger-nav").style.display = "block";
         } else {
-          document.querySelector(".hamburgerNav").style.display = "none";
+          document.querySelector(".hamburger-nav").style.display = "none";
         }
       };
 

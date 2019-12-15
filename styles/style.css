@@ -279,7 +279,6 @@ h3 {
   font-size: 1.25rem;
   line-height: 58px;
   letter-spacing: 0.8px;
-  color: #ffd300;
 }
 
 h4 {
@@ -291,12 +290,10 @@ h4 {
 }
 
 p {
-  font-family: "Barlow", sans-serif;
   font-size: 20px;
   font-size: 1rem;
   font-weight: 400;
   line-height: 28px;
-  color: #ffffff;
 }
 
 span {
@@ -372,16 +369,16 @@ img {
   display: block;
 }
 
-nav.desktopNav {
+nav.desktop-nav {
   padding: 20px 0;
   background: #ffffff;
 }
 
-nav.desktopNav h2 {
+nav.desktop-nav h2 {
   line-height: 0;
 }
 
-nav.desktopNav .flexContainer {
+nav.desktop-nav .flexContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -393,7 +390,7 @@ nav.desktopNav .flexContainer {
           align-items: center;
 }
 
-nav.desktopNav a {
+nav.desktop-nav a {
   color: #0f0f0f;
   line-height: 29px;
   font-weight: bold;
@@ -402,7 +399,7 @@ nav.desktopNav a {
   text-decoration: none;
 }
 
-nav.desktopNav a:hover {
+nav.desktop-nav a:hover {
   color: #ffd300;
   -webkit-transition: all 250ms ease-in-out, -webkit-transform 150ms ease;
   transition: all 250ms ease-in-out, -webkit-transform 150ms ease;
@@ -410,18 +407,18 @@ nav.desktopNav a:hover {
   transition: all 250ms ease-in-out, transform 150ms ease, -webkit-transform 150ms ease;
 }
 
-nav.desktopNav ul {
+nav.desktop-nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-nav.desktopNav li {
+nav.desktop-nav li {
   margin: 0 20px;
   position: relative;
 }
 
-nav.desktopNav li:after {
+nav.desktop-nav li:after {
   content: "";
   position: absolute;
   height: 2px;
@@ -435,12 +432,12 @@ nav.desktopNav li:after {
   transition: 0.5s;
 }
 
-nav.desktopNav li:hover:after {
+nav.desktop-nav li:hover:after {
   width: 80%;
   background: #ffd300;
 }
 
-nav.hamburgerNav {
+nav.hamburger-nav {
   display: none;
   position: fixed;
   right: 100px;
@@ -686,6 +683,7 @@ section.about {
 
 section.about h2 {
   text-align: center;
+  padding-top: 30px;
 }
 
 .split {
@@ -694,21 +692,53 @@ section.about h2 {
   display: flex;
 }
 
-.aboutMe {
+.about-me {
   width: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
-.mySkills {
+.about-me .imageContainer {
+  width: 500px;
+  height: 667px;
+  position: relative;
+  -webkit-perspective: 800px;
+          perspective: 800px;
+  /*important for how "in yo face" the flip is. The lower the value, the closer you will view the transform" */
+  /*transform-style: preserve-3d;*/
+}
+
+.about-me .front-image {
+  z-index: 5;
+}
+
+.about-me .front-image,
+.about-me .back-image {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.about-me .back-image {
+  /*By Default set the back to be rotate */
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.about-me .imageContainer:hover .back-image {
+  -webkit-transform: rotateY(0);
+          transform: rotateY(0);
+}
+
+.about-me .imageContainer:hover .front-image {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+  z-index: 0;
+}
+
+.my-skills {
   width: 50%;
   background: red;
 }
