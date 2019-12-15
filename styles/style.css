@@ -246,7 +246,7 @@ table {
 
 html,
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 20px;
 }
 
@@ -258,12 +258,12 @@ input[type="submit"] {
   text-transform: uppercase;
 }
 
-h1,
-span {
-  font-size: 69px;
-  font-size: 3.45rem;
+h1 {
+  font-size: 70px;
+  font-size: 3.5rem;
   line-height: 90px;
   font-weight: 600;
+  font-weight: bold;
 }
 
 h2 {
@@ -297,6 +297,14 @@ p {
   font-weight: 400;
   line-height: 28px;
   color: #ffffff;
+}
+
+span {
+  font-size: 40px;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 58px;
+  letter-spacing: 0.8px;
 }
 
 *:focus {
@@ -364,24 +372,28 @@ img {
   display: block;
 }
 
-nav.desktop-nav {
+nav.desktopNav {
   padding: 20px 0;
   background: #ffffff;
 }
 
-nav.desktop-nav .flexContainer {
+nav.desktopNav h2 {
+  line-height: 0;
+}
+
+nav.desktopNav .flexContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-nav.desktop-nav a {
+nav.desktopNav a {
   color: #0f0f0f;
   line-height: 29px;
   font-weight: bold;
@@ -390,7 +402,7 @@ nav.desktop-nav a {
   text-decoration: none;
 }
 
-nav.desktop-nav a:hover {
+nav.desktopNav a:hover {
   color: #ffd300;
   -webkit-transition: all 250ms ease-in-out, -webkit-transform 150ms ease;
   transition: all 250ms ease-in-out, -webkit-transform 150ms ease;
@@ -398,105 +410,46 @@ nav.desktop-nav a:hover {
   transition: all 250ms ease-in-out, transform 150ms ease, -webkit-transform 150ms ease;
 }
 
-nav.desktop-nav ul {
+nav.desktopNav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-nav.desktop-nav li {
+nav.desktopNav li {
   margin: 0 20px;
   position: relative;
 }
 
-nav.desktop-nav li:after {
-  position: absolute;
+nav.desktopNav li:after {
   content: "";
+  position: absolute;
   height: 2px;
   bottom: -4px;
   margin: 0 auto;
   left: 0;
   right: 0;
   width: 50%;
-  background: #364419;
   /* optional animation */
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
-nav.desktop-nav li:hover:after {
+nav.desktopNav li:hover:after {
   width: 80%;
   background: #ffd300;
 }
 
-.hamburger,
-.hamburger-nav {
+nav.hamburgerNav {
   display: none;
+  position: fixed;
+  right: 100px;
+  top: 100px;
 }
 
-.hamburger-nav i {
-  font-size: 50px;
-  font-size: 2.5rem;
-  margin: 10px;
-  color: #ffffff;
-  text-align: right;
-}
-
-@media only screen and (max-width: 700px) {
-  .hamburger-nav {
-    display: block;
-  }
-  nav.desktop-nav {
-    display: none;
-  }
-  header ul.nav {
-    background: #0f0f0f;
-    position: fixed;
-    z-index: 10;
-    width: 50%;
-    right: -50%;
-    top: 10%;
-    height: 50%;
-    padding: 20px;
-    border-top-left-radius: 40px;
-    border-bottom-left-radius: 40px;
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
-  }
-  header ul.nav a {
-    color: #ffffff;
-    display: inline-block;
-    font-size: 20px;
-    font-size: 1rem;
-    width: 100%;
-    padding: 20px;
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s;
-  }
-  header ul.nav a:hover,
-  header ul.nav a:focus {
-    border-bottom: 2px solid #ffd300;
-  }
-  header input[type="checkbox"]:checked + ul.nav {
-    right: 0;
-  }
-  header input[type="checkbox"] {
-    display: none;
-  }
-  header label[for="toggle"] {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    color: #ffffff;
-    z-index: 10;
-  }
-}
-
-#menuToggle {
-  display: block;
-  position: relative;
-  top: 50px;
-  left: 50px;
+.menuToggle {
+  position: absolute;
+  top: -50px;
   z-index: 1;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -504,24 +457,23 @@ nav.desktop-nav li:hover:after {
        user-select: none;
 }
 
-#menuToggle a {
-  text-decoration: none;
-  color: #232323;
+.menuToggle a {
+  color: #0f0f0f;
   -webkit-transition: color 0.3s ease;
   transition: color 0.3s ease;
 }
 
-#menuToggle a:hover {
-  color: tomato;
+.menuToggle a:hover {
+  color: #ffd300;
 }
 
-#menuToggle input {
+.menuToggle input {
   display: block;
   width: 40px;
   height: 32px;
   position: absolute;
-  top: -7px;
-  left: -5px;
+  top: -10px;
+  left: -10px;
   cursor: pointer;
   opacity: 0;
   /* hide this */
@@ -530,13 +482,36 @@ nav.desktop-nav li:hover:after {
   -webkit-touch-callout: none;
 }
 
-#menuToggle span {
+.menuToggle input:checked ~ span {
+  opacity: 1;
+  -webkit-transform: rotate(45deg) translate(-2px, -1px);
+          transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+.menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  -webkit-transform: rotate(0deg) scale(0.2, 0.2);
+          transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+.menuToggle input:checked ~ span:nth-last-child(2) {
+  -webkit-transform: rotate(-45deg) translate(0, -1px);
+          transform: rotate(-45deg) translate(0, -1px);
+}
+
+.menuToggle input:checked ~ ul {
+  -webkit-transform: none;
+          transform: none;
+}
+
+.menuToggle span {
   display: block;
   width: 33px;
   height: 4px;
   margin-bottom: 5px;
   position: relative;
-  background: #cdcdcd;
+  background: #0f0f0f;
   border-radius: 3px;
   z-index: 1;
   -webkit-transform-origin: 4px 0px;
@@ -547,79 +522,41 @@ nav.desktop-nav li:hover:after {
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
 
-#menuToggle span:first-child {
+.menuToggle span:first-child {
   -webkit-transform-origin: 0% 0%;
           transform-origin: 0% 0%;
 }
 
-#menuToggle span:nth-last-child(2) {
+.menuToggle span:nth-last-child(2) {
   -webkit-transform-origin: 0% 100%;
           transform-origin: 0% 100%;
 }
 
-/* 
- * Transform all the slices of hamburger
- * into a crossmark.
- */
-#menuToggle input:checked ~ span {
-  opacity: 1;
-  -webkit-transform: rotate(45deg) translate(-2px, -1px);
-          transform: rotate(45deg) translate(-2px, -1px);
-  background: #232323;
-}
-
-/*
- * But let's hide the middle one.
- */
-#menuToggle input:checked ~ span:nth-last-child(3) {
-  opacity: 0;
-  -webkit-transform: rotate(0deg) scale(0.2, 0.2);
-          transform: rotate(0deg) scale(0.2, 0.2);
-}
-
-/*
- * Ohyeah and the last one should go the other direction
- */
-#menuToggle input:checked ~ span:nth-last-child(2) {
-  -webkit-transform: rotate(-45deg) translate(0, -1px);
-          transform: rotate(-45deg) translate(0, -1px);
-}
-
-/*
- * Make this absolute positioned
- * at the top left of the screen
- */
-#menu {
+.menuToggle .menu {
   position: absolute;
+  top: -50px;
+  left: -200px;
   width: 300px;
-  margin: -100px 0 0 -50px;
   padding: 50px;
   padding-top: 125px;
-  background: #ededed;
+  height: 100vh;
+  background: #ffffff;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   /* to stop flickering of text in safari */
   -webkit-transform-origin: 0% 0%;
           transform-origin: 0% 0%;
-  -webkit-transform: translate(-100%, 0);
-          transform: translate(-100%, 0);
+  -webkit-transform: translate(100%, 0);
+          transform: translate(100%, 0);
   -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   transition: -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
 
-#menu li {
+.menuToggle .menu li {
   padding: 10px 0;
   font-size: 22px;
-}
-
-/*
- * And let's slide it in from the left
- */
-#menuToggle input:checked ~ ul {
-  -webkit-transform: none;
-          transform: none;
 }
 
 header {
@@ -628,20 +565,11 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  overflow: hidden;
 }
 
 h1 {
-  font-family: "Raleway", sans-serif;
-  font-weight: bold;
-  font-size: 3rem;
-}
-
-.scrollDown {
-  cursor: pointer;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  right: 50%;
+  padding-top: 30vh;
 }
 
 .arrows {
@@ -654,9 +582,9 @@ h1 {
 }
 
 .arrows path {
-  stroke: #2994d1;
+  stroke: #0f0f0f;
   fill: transparent;
-  stroke-width: 1px;
+  stroke-width: 3px;
   animation: arrow 2s infinite;
   -webkit-animation: arrow 2s infinite;
 }
@@ -756,22 +684,33 @@ section.about {
   height: 100vh;
 }
 
+section.about h2 {
+  text-align: center;
+}
+
 .split {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
 }
 
 .aboutMe {
   width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .mySkills {
   width: 50%;
+  background: red;
 }
 
 section.work {

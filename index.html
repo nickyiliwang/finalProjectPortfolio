@@ -21,25 +21,11 @@
     >
     <!-- header -->
     <header id="home">
-      <!-- hamburger-nav -->
-      <nav aria-hidden="true" class="hamburger-nav">
-        <input type="checkbox" id="toggle" name="toggle" />
-        <span></span>
-        <span></span>
-        <span></span>
-        <ul class="nav">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About Me</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      <!-- end of hamburger-nav -->
-      <!-- desktop-nav -->
-      <nav class="desktop-nav">
+      <!-- desktopNav -->
+      <nav class="desktopNav">
         <div class="wrapper flexContainer">
           <div class="logo-icon">
-            NW
+            <h2>NW</h2>
           </div>
           <div class="menu">
             <ul>
@@ -51,7 +37,25 @@
           </div>
         </div>
       </nav>
-      <!-- end of desktop-nav -->
+      <!-- end of desktopNav -->
+      <!-- hamburgerNav -->
+      <nav aria-hidden="true" class="hamburgerNav">
+        <div class="wrapper">
+          <div class="menuToggle">
+            <input type="checkbox" id="toggle" name="toggle" />
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul class="menu">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About Me</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- end of hamburgerNav -->
       <div class="wrapper">
         <h1>Hello! I'm Nick,</h1>
         <h2>
@@ -59,12 +63,14 @@
             <p>a Web developer</p>
             <p>a Cat enthusiast</p>
             <p>a Gamer</p>
+            <p>a Good friend</p>
           </div>
         </h2>
         <span id="typed"></span>
       </div>
-      <a href="#mainContent" class="scrollDown bounce">
-        <svg class="arrows">
+      <!-- scroll down arrow -->
+      <a href="#mainContent">
+        <svg class="arrows bounce">
           <path class="a1" d="M0 0 L30 32 L60 0"></path>
           <path class="a2" d="M0 20 L30 52 L60 20"></path>
           <path class="a3" d="M0 40 L30 72 L60 40"></path>
@@ -76,9 +82,16 @@
     <main id="mainContent">
       <section class="about" id="about">
         <div class="wrapper">
+          <h2>About Me</h2>
           <div class="split">
             <div class="aboutMe">
-              <h2>About me</h2>
+              <div class="imageContainer">
+                <img
+                  src="./assets/nick-front.webp"
+                  alt="Nick wang photo-shoot, young man smiling standing"
+                />
+              </div>
+              <h3>Bio:</h3>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum,
                 vel molestias sit numquam repudiandae expedita consequuntur
@@ -230,8 +243,29 @@
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
     <!-- main script -->
     <script>
+      window.onscroll = function() {
+        scrollFunction();
+      };
+
+      const scrollFunction = () => {
+        if (
+          document.body.scrollTop > 80 ||
+          document.documentElement.scrollTop > 80
+        ) {
+          document.querySelector(".hamburgerNav").style.display = "block";
+        } else {
+          document.querySelector(".hamburgerNav").style.display = "none";
+        }
+      };
+
+      document.querySelectorAll(".menu a").forEach(tag => {
+        tag.addEventListener("click", () => {
+          document.querySelector("#toggle").checked = false;
+        });
+      });
+
       AOS.init();
-      var scroll = new SmoothScroll('a[href*="#"]');
+      const scroll = new SmoothScroll('a[href*="#"]');
       const typed = new Typed("#typed", {
         stringsElement: "#typed-strings",
         typeSpeed: 50,

@@ -1,19 +1,23 @@
 section.about {
-height: 100vh;
+  height: 100vh;
 
-
+  h2 {
+    text-align: center;
+  }
 }
 
 .split {
-    display: flex;
-    flex-direction: row;
+  display: flex;
 }
 
-
 .aboutMe {
-    width: 50%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .mySkills {
-    width: 50%;
+  width: 50%;
+  background: red;
 }
