@@ -1,0 +1,46 @@
+section.contact {
+    height: 100vh;
+    
+
+
+
+
+}
+
+// form styles
+form {
+    display: flex;
+    flex-direction: column;
+  
+    input,
+    textarea {
+      background: none;
+      border: none;
+      margin: 20px 10px;
+      padding: 20px;
+      color: $primaryWhite;
+  
+      &::placeholder {
+        padding: 0 20px;
+      }
+    }
+  
+    input {
+      border-bottom: 1px solid $primaryYellow;
+    }
+  
+    .user-info {
+      display: flex;
+    }
+  
+    .name,
+    .email {
+      width: 50%;
+    }
+  
+    textarea {
+      border: 1px solid $primaryYellow;
+      resize: none;
+    }
+  }
+  

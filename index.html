@@ -17,33 +17,38 @@
   <body>
     <!-- skip-link -->
     <a href="#maincontent" class="skip-link">Skip to main content.</a>
-    <!-- end of skip-link -->
     <!-- header -->
     <header id="home">
+      <!-- hamburger-nav -->
+      <nav class="hamburger-nav">
+        <label for="toggle"><i class="fa fa-bars"></i></label>
+        <input type="checkbox" id="toggle" name="toggle" />
+        <ul class="nav">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <!-- end of hamburger-nav -->
+      <!-- desktop-nav -->
+      <nav class="desktop-nav">
+        <div class="wrapper flexContainer">
+          <div class="logo-icon">
+            NW
+          </div>
+          <div class="menu">
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About Me</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- end of desktop-nav -->
       <div class="wrapper">
-        <!-- hamburger-nav -->
-        <nav class="hamburger-nav">
-          <label for="toggle"><i class="fa fa-bars"></i></label>
-          <input type="checkbox" id="toggle" name="toggle" />
-          <ul class="nav">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-        <!-- end of hamburger-nav -->
-        <!-- desktop-nav -->
-        <nav class="desktop-nav">
-          <ul>
-            <li><a href="#" id="icon">NYW</a></li>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-        <!-- end of desktop-nav -->
         <h1>Hello! I'm Nick,</h1>
         <h2>
           <div id="typed-strings">
@@ -54,8 +59,7 @@
         </h2>
         <span id="typed"></span>
       </div>
-
-      <button class="bounce">
+      <button class="scrollDown bounce">
         <svg class="arrows">
           <path class="a1" d="M0 0 L30 32 L60 0"></path>
           <path class="a2" d="M0 20 L30 52 L60 20"></path>
@@ -63,6 +67,8 @@
         </svg>
       </button>
     </header>
+    <!-- end of header -->
+    <!-- main -->
     <main id="maincontent">
       <section class="about" id="about">
         <div class="wrapper">
@@ -148,74 +154,81 @@
             action="http://www.focuspocus.io/magic/ed6b2214b5393b5129306b30a9a7eaa7"
             method="POST"
           >
-            <label>
-              Your Name:
-              <input type="text" name="name" />
-            </label>
-            <label>
+            <label for="name">Your Name:</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="name"
+              required
+            />
+            <label for="email">
               Your Email:
-              <input type="email" name="_replyto" />
             </label>
+            <input type="email" name="email" id="email" placeholder="email" />
             <label>
               Message:
-              <textarea name="message"></textarea>
             </label>
+            <textarea name="message" name="message" id="message"></textarea>
             <input type="submit" value="Send" />
+            <ul class="socials">
+              <li>
+                <a
+                  title="https://github.com/nickyiliwang"
+                  href="https://github.com/nickyiliwang"
+                  target="_blank"
+                  ><i class="fab fa-github"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  title="https://ca.linkedin.com/in/nickyiliwang"
+                  href="https://ca.linkedin.com/in/nickyiliwang"
+                  target="_blank"
+                  ><i class="fab fa-linkedin"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  title="https://twitter.com/nickyiliwang"
+                  href="https://twitter.com/nickyiliwang"
+                  target="_blank"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  title="https://www.artstation.com/nickyiliwang"
+                  href="https://www.artstation.com/nickyiliwang"
+                  target="_blank"
+                  ><i class="fab fa-artstation"></i
+                ></a>
+              </li>
+            </ul>
           </form>
-          <ul class="socials">
-            <li>
-              <a
-                title="https://github.com/nickyiliwang"
-                href="https://github.com/nickyiliwang"
-                target="_blank"
-                ><i class="fab fa-github"></i
-              ></a>
-            </li>
-            <li>
-              <a
-                title="https://ca.linkedin.com/in/nickyiliwang"
-                href="https://ca.linkedin.com/in/nickyiliwang"
-                target="_blank"
-                ><i class="fab fa-linkedin"></i
-              ></a>
-            </li>
-            <li>
-              <a
-                title="https://twitter.com/nickyiliwang"
-                href="https://twitter.com/nickyiliwang"
-                target="_blank"
-                ><i class="fab fa-twitter"></i
-              ></a>
-            </li>
-            <li>
-              <a
-                title="https://www.artstation.com/nickyiliwang"
-                href="https://www.artstation.com/nickyiliwang"
-                target="_blank"
-                ><i class="fab fa-artstation"></i
-              ></a>
-            </li>
-          </ul>
         </div>
       </section>
     </main>
+    <!-- end of main -->
+    <!-- footer -->
     <footer>
       <p>Website © 2019 by Nick (Yili) Wang</p>
     </footer>
-
+    <!-- end of footer -->
+    <!-- scripts -->
     <!-- typedJS -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
     <!-- animateOnScroll -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- smoothScroll -->
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
-
+    <!-- main script -->
     <script>
-      var scroll = new SmoothScroll('a[href*="#"]', {
+      const scroll = new SmoothScroll('a[href*="#"]', {
         speed: 300
       });
 
-      var typed = new Typed("#typed", {
+      const typed = new Typed("#typed", {
         stringsElement: "#typed-strings",
         typeSpeed: 50,
         backSpeed: 25,

@@ -252,12 +252,25 @@ body {
 
 .wrapper {
   width: 80%;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
 nav.desktop-nav {
-  padding: 50px 0;
+  padding: 20px 0;
+  background: #ffffff;
+}
+
+nav.desktop-nav .flexContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
 
 nav.desktop-nav a {
@@ -371,57 +384,26 @@ nav.desktop-nav li:hover:after {
   }
 }
 
-.bounce {
-  -webkit-animation: bounce 2s infinite;
-  animation: bounce 2s infinite;
-}
-
-@-webkit-keyframes bounce {
-  0%,
-  20%,
-  50%,
-  80%,
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  40% {
-    -webkit-transform: translateY(-30px);
-            transform: translateY(-30px);
-  }
-  60% {
-    -webkit-transform: translateY(-15px);
-            transform: translateY(-15px);
-  }
-}
-
-@keyframes bounce {
-  0%,
-  20%,
-  50%,
-  80%,
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  40% {
-    -webkit-transform: translateY(-30px);
-            transform: translateY(-30px);
-  }
-  60% {
-    -webkit-transform: translateY(-15px);
-            transform: translateY(-15px);
-  }
-}
-
 header {
   height: 100vh;
+  background: url(../assets/borna-bevanda-w12NAMymqnk-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
 
 h1 {
   font-family: "Raleway", sans-serif;
   font-weight: bold;
-  font-size: 4rem;
+  font-size: 3rem;
+}
+
+.scrollDown {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  right: 50%;
+  outline: none;
 }
 
 .arrows {
@@ -434,7 +416,7 @@ h1 {
 }
 
 .arrows path {
-  stroke: #2994D1;
+  stroke: #2994d1;
   fill: transparent;
   stroke-width: 1px;
   animation: arrow 2s infinite;
@@ -489,6 +471,49 @@ h1 {
   /* Safari 和 Chrome */
 }
 
+.bounce {
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+
+@-webkit-keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+  }
+}
+
 section.about {
   height: 100vh;
 }
@@ -517,6 +542,65 @@ section.work {
 
 section.contact {
   height: 100vh;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+form input,
+form textarea {
+  background: none;
+  border: none;
+  margin: 20px 10px;
+  padding: 20px;
+  color: #ffffff;
+}
+
+form input::-webkit-input-placeholder,
+form textarea::-webkit-input-placeholder {
+  padding: 0 20px;
+}
+
+form input:-ms-input-placeholder,
+form textarea:-ms-input-placeholder {
+  padding: 0 20px;
+}
+
+form input::-ms-input-placeholder,
+form textarea::-ms-input-placeholder {
+  padding: 0 20px;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+  padding: 0 20px;
+}
+
+form input {
+  border-bottom: 1px solid #ffd300;
+}
+
+form .user-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+form .name,
+form .email {
+  width: 50%;
+}
+
+form textarea {
+  border: 1px solid #ffd300;
+  resize: none;
 }
 
 footer {
