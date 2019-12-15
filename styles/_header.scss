@@ -12,18 +12,13 @@ h1 {
   font-size: 3rem;
 }
 
-
-
-
-
 .scrollDown {
+  cursor: pointer;
   position: absolute;
   bottom: 0;
   left: 50%;
   right: 50%;
-  outline: none;
-} 
-
+}
 
 .arrows {
   width: 60px;

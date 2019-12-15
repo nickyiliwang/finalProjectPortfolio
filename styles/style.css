@@ -250,10 +250,118 @@ body {
   font-size: 20px;
 }
 
+h1,
+h2,
+h3,
+button,
+input[type="submit"] {
+  text-transform: uppercase;
+}
+
+h1,
+span {
+  font-size: 69px;
+  font-size: 3.45rem;
+  line-height: 90px;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 40px;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 58px;
+  letter-spacing: 0.8px;
+}
+
+h3 {
+  font-size: 25px;
+  font-size: 1.25rem;
+  line-height: 58px;
+  letter-spacing: 0.8px;
+  color: #ffd300;
+}
+
+h4 {
+  font-size: 20px;
+  font-size: 1rem;
+  line-height: 30px;
+  letter-spacing: 0.8px;
+  color: #ffd300;
+}
+
+p {
+  font-family: "Barlow", sans-serif;
+  font-size: 20px;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 28px;
+  color: #ffffff;
+}
+
+*:focus {
+  outline: 0;
+}
+
+button,
+input[type="submit"] {
+  font-size: 22.4px;
+  font-size: 1.12rem;
+  font-weight: 600;
+  line-height: 58px;
+  letter-spacing: 0.8px;
+  padding: 0 10px;
+  background: #ffd300;
+  color: #0f0f0f;
+  text-decoration: none;
+  display: inline-block;
+  border: none;
+  -webkit-transition: all 250ms ease-in-out, -webkit-transform 150ms ease;
+  transition: all 250ms ease-in-out, -webkit-transform 150ms ease;
+  transition: all 250ms ease-in-out, transform 150ms ease;
+  transition: all 250ms ease-in-out, transform 150ms ease, -webkit-transform 150ms ease;
+}
+
+a {
+  text-decoration: none;
+}
+
+.inverted {
+  color: #ffffff;
+  background: #0f0f0f;
+}
+
+.inverted:hover, .inverted:focus {
+  background: #ffd300;
+  color: #0f0f0f;
+}
+
+button:hover,
+button:focus,
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+  background: #ffffff;
+}
+
+button:focus {
+  outline: 2px solid red;
+  outline-offset: -4px;
+}
+
+button:active {
+  -webkit-transform: scale(0.99);
+          transform: scale(0.99);
+}
+
 .wrapper {
   width: 80%;
   max-width: 1400px;
   margin: 0 auto;
+}
+
+img {
+  width: 100%;
+  display: block;
 }
 
 nav.desktop-nav {
@@ -384,6 +492,136 @@ nav.desktop-nav li:hover:after {
   }
 }
 
+#menuToggle {
+  display: block;
+  position: relative;
+  top: 50px;
+  left: 50px;
+  z-index: 1;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+}
+
+#menuToggle a {
+  text-decoration: none;
+  color: #232323;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover {
+  color: tomato;
+}
+
+#menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0;
+  /* hide this */
+  z-index: 2;
+  /* and place it over the hamburger */
+  -webkit-touch-callout: none;
+}
+
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #cdcdcd;
+  border-radius: 3px;
+  z-index: 1;
+  -webkit-transform-origin: 4px 0px;
+          transform-origin: 4px 0px;
+  -webkit-transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+#menuToggle span:first-child {
+  -webkit-transform-origin: 0% 0%;
+          transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+  -webkit-transform-origin: 0% 100%;
+          transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span {
+  opacity: 1;
+  -webkit-transform: rotate(45deg) translate(-2px, -1px);
+          transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  -webkit-transform: rotate(0deg) scale(0.2, 0.2);
+          transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2) {
+  -webkit-transform: rotate(-45deg) translate(0, -1px);
+          transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu {
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  -webkit-transform-origin: 0% 0%;
+          transform-origin: 0% 0%;
+  -webkit-transform: translate(-100%, 0);
+          transform: translate(-100%, 0);
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+#menu li {
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul {
+  -webkit-transform: none;
+          transform: none;
+}
+
 header {
   height: 100vh;
   background: url(../assets/borna-bevanda-w12NAMymqnk-unsplash.jpg);
@@ -399,11 +637,11 @@ h1 {
 }
 
 .scrollDown {
+  cursor: pointer;
   position: absolute;
   bottom: 0;
   left: 50%;
   right: 50%;
-  outline: none;
 }
 
 .arrows {

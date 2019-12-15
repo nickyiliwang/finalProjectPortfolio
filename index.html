@@ -16,13 +16,17 @@
   </head>
   <body>
     <!-- skip-link -->
-    <a href="#maincontent" class="skip-link">Skip to main content.</a>
+    <a tabindex="0" href="#mainContent" class="skip-link"
+      >Skip to main content.</a
+    >
     <!-- header -->
     <header id="home">
       <!-- hamburger-nav -->
-      <nav class="hamburger-nav">
-        <label for="toggle"><i class="fa fa-bars"></i></label>
+      <nav aria-hidden="true" class="hamburger-nav">
         <input type="checkbox" id="toggle" name="toggle" />
+        <span></span>
+        <span></span>
+        <span></span>
         <ul class="nav">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About Me</a></li>
@@ -59,17 +63,17 @@
         </h2>
         <span id="typed"></span>
       </div>
-      <button class="scrollDown bounce">
+      <a href="#mainContent" class="scrollDown bounce">
         <svg class="arrows">
           <path class="a1" d="M0 0 L30 32 L60 0"></path>
           <path class="a2" d="M0 20 L30 52 L60 20"></path>
           <path class="a3" d="M0 40 L30 72 L60 40"></path>
         </svg>
-      </button>
+      </a>
     </header>
     <!-- end of header -->
     <!-- main -->
-    <main id="maincontent">
+    <main id="mainContent">
       <section class="about" id="about">
         <div class="wrapper">
           <div class="split">
@@ -150,6 +154,8 @@
       <!-- end of work section -->
       <section class="contact" id="contact">
         <div class="wrapper">
+          <h2>Contact</h2>
+
           <form
             action="http://www.focuspocus.io/magic/ed6b2214b5393b5129306b30a9a7eaa7"
             method="POST"
@@ -224,10 +230,8 @@
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
     <!-- main script -->
     <script>
-      const scroll = new SmoothScroll('a[href*="#"]', {
-        speed: 300
-      });
-
+      AOS.init();
+      var scroll = new SmoothScroll('a[href*="#"]');
       const typed = new Typed("#typed", {
         stringsElement: "#typed-strings",
         typeSpeed: 50,
@@ -236,8 +240,6 @@
         loopCount: Infinity,
         smartBackspace: true
       });
-
-      AOS.init();
     </script>
   </body>
 </html>
