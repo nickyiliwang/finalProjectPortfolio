@@ -1,10 +1,11 @@
 section.about {
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
+  background: $primaryBackgroundGrey;
 
   h2 {
     text-align: center;
-    padding: 50px 0;
+    padding: 50px 0 30px 0;
   }
 }
 
@@ -19,8 +20,8 @@ section.about {
   flex-direction: column;
 
   .imageContainer {
-    width: 250px;
-    height: 334px;
+    width: 300px;
+    height: 400px;
     perspective: 800px;
     transform-style: preserve-3d;
   }
@@ -31,6 +32,8 @@ section.about {
 
   .front-image,
   .back-image {
+    border-radius: 10px;
+
     position: absolute;
     height: 100%;
     width: 100%;
@@ -53,6 +56,42 @@ section.about {
   }
 }
 
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .my-skills {
-  width: 50%;
+  h3 {
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    li {
+      margin: 5px 0;
+      border: 1px solid $primaryBlack;
+      padding: 20px;
+      border-radius: 50%;
+      -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+      filter: grayscale(100%);
+      transition: all 0.3s linear;
+    }
+
+    li:hover {
+      -webkit-filter: grayscale(0); /* Safari 6.0 - 9.0 */
+      filter: grayscale(0);
+      transition: all 0.3s linear;
+    }
+
+    img {
+      width: 80px;
+      height: 80px;
+    }
+  }
 }

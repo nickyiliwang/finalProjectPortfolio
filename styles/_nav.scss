@@ -87,6 +87,7 @@ nav.hamburger-nav {
   }
 
   input {
+    
     display: block;
     width: 40px;
     height: 32px;
@@ -141,6 +142,7 @@ nav.hamburger-nav {
   }
 
   .menu {
+    @include boxShadow;
     position: absolute;
     top: -50px;
     left: -200px;

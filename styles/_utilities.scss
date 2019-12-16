@@ -7,6 +7,7 @@ $primaryWhite: #ffffff;
 
 // background colors
 $primaryBackgroundBlack: #171b0e;
+$primaryBackgroundGrey: #b3d4fc;
 
 // mixins
 // Centering
@@ -14,6 +15,10 @@ $primaryBackgroundBlack: #171b0e;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@mixin boxShadow {
+  box-shadow: 0 0 30px #dbd6d3, 0 0 10px #050401;
 }
 
 // font sizes turn into rem values

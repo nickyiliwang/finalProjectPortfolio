@@ -639,6 +639,8 @@ nav.hamburger-nav {
 }
 
 .menuToggle .menu {
+  -webkit-box-shadow: 0 0 30px #dbd6d3, 0 0 10px #050401;
+          box-shadow: 0 0 30px #dbd6d3, 0 0 10px #050401;
   position: absolute;
   top: -50px;
   left: -200px;
@@ -667,7 +669,7 @@ nav.hamburger-nav {
 
 header {
   height: 100vh;
-  background: url(../assets/borna-bevanda-w12NAMymqnk-unsplash.jpg);
+  background: url(../assets/header.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -678,13 +680,14 @@ h1 {
 }
 
 section.about {
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
+  background: #b3d4fc;
 }
 
 section.about h2 {
   text-align: center;
-  padding: 50px 0;
+  padding: 50px 0 30px 0;
 }
 
 .split {
@@ -708,8 +711,8 @@ section.about h2 {
 }
 
 .about-me .imageContainer {
-  width: 250px;
-  height: 334px;
+  width: 300px;
+  height: 400px;
   -webkit-perspective: 800px;
           perspective: 800px;
   -webkit-transform-style: preserve-3d;
@@ -722,6 +725,7 @@ section.about h2 {
 
 .about-me .front-image,
 .about-me .back-image {
+  border-radius: 10px;
   position: absolute;
   height: 100%;
   width: 100%;
@@ -747,12 +751,68 @@ section.about h2 {
   z-index: 0;
 }
 
-.my-skills {
-  width: 50%;
+.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-section.work {
+.my-skills h3 {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.my-skills ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.my-skills ul li {
+  margin: 5px 0;
+  border: 1px solid #0f0f0f;
+  padding: 20px;
+  border-radius: 50%;
+  -webkit-filter: grayscale(100%);
+  /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.my-skills ul li:hover {
+  -webkit-filter: grayscale(0);
+  /* Safari 6.0 - 9.0 */
+  filter: grayscale(0);
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.my-skills ul img {
+  width: 80px;
+  height: 80px;
+}
+
+section.projects {
   height: 100vh;
+  position: relative;
+}
+
+section.projects h2 {
+  text-align: center;
+  padding: 50px 0 30px 0;
 }
 
 section.contact {
