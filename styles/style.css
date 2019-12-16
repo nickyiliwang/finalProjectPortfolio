@@ -815,6 +815,20 @@ section.projects h2 {
   padding: 50px 0 30px 0;
 }
 
+section.projects ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+section.projects .imageContainer {
+  width: 50%;
+}
+
+section.projects .contentContainer {
+  width: 50%;
+}
+
 section.contact {
   height: 100vh;
 }

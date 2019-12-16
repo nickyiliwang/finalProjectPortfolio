@@ -1,9 +1,20 @@
 section.projects {
-    height: 100vh;
-    position: relative;
+  height: 100vh;
+  position: relative;
 
-    h2 {
-        text-align: center;
-        padding: 50px 0 30px 0;
-      }
+  h2 {
+    text-align: center;
+    padding: 50px 0 30px 0;
+  }
+
+  ul li {
+    display: flex;
+  }
+
+  .imageContainer {
+    width: 50%;
+  }
+  .contentContainer {
+    width: 50%;
+  }
 }
