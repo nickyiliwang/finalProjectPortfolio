@@ -4,8 +4,12 @@ section.about {
   background: $primaryBackgroundGrey;
 
   h2 {
-    text-align: center;
-    padding: 50px 0 30px 0;
+    padding: 50px 0 0 0;
+  }
+
+  hr {
+    margin: 50px 0 40px 0;
+    border: 1px solid rgb(137, 123, 120);
   }
 }
 
@@ -14,6 +18,8 @@ section.about {
 }
 
 .about-me {
+  padding-top: 50px;
+
   width: 50%;
   display: flex;
   align-items: center;

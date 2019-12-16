@@ -23,7 +23,7 @@ nav.desktop-nav {
     text-decoration: none;
 
     &:hover {
-      color: $primaryYellow;
+      color: $primaryBrown;
       transition: all 250ms ease-in-out, transform 150ms ease;
     }
   }
@@ -56,7 +56,7 @@ nav.desktop-nav {
 
     &:hover:after {
       width: 80%;
-      background: $primaryYellow;
+      background: $primaryBrown;
     }
   }
 }
@@ -78,16 +78,15 @@ nav.hamburger-nav {
   user-select: none;
 
   a {
-    color: $primaryBlack;
+    color: $primaryBackgroundGrey;
     transition: color 0.3s ease;
   }
 
   a:hover {
-    color: $primaryYellow;
+    color: $primaryBrown;
   }
 
   input {
-    
     display: block;
     width: 40px;
     height: 32px;
@@ -151,7 +150,7 @@ nav.hamburger-nav {
     padding-top: 125px;
     height: 100vh;
 
-    background: $primaryWhite;
+    background: $primaryDarkBrown;
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
     /* to stop flickering of text in safari */

@@ -266,16 +266,16 @@ h1 {
 }
 
 h2 {
-  font-size: 40px;
-  font-size: 2rem;
+  font-size: 50px;
+  font-size: 2.5rem;
   font-weight: 400;
   line-height: 58px;
   letter-spacing: 0.8px;
 }
 
 h3 {
-  font-size: 25px;
-  font-size: 1.25rem;
+  font-size: 30px;
+  font-size: 1.5rem;
   line-height: 58px;
   letter-spacing: 0.8px;
 }
@@ -285,7 +285,7 @@ h4 {
   font-size: 1rem;
   line-height: 30px;
   letter-spacing: 0.8px;
-  color: #ffd300;
+  color: #a47b5b;
 }
 
 p {
@@ -315,7 +315,7 @@ input[type="submit"] {
   line-height: 58px;
   letter-spacing: 0.8px;
   padding: 0 10px;
-  background: #ffd300;
+  background: #a47b5b;
   color: #0f0f0f;
   text-decoration: none;
   display: inline-block;
@@ -336,7 +336,7 @@ a {
 }
 
 .inverted:hover, .inverted:focus {
-  background: #ffd300;
+  background: #a47b5b;
   color: #0f0f0f;
 }
 
@@ -508,7 +508,7 @@ nav.desktop-nav a {
 }
 
 nav.desktop-nav a:hover {
-  color: #ffd300;
+  color: #a47b5b;
   -webkit-transition: all 250ms ease-in-out, -webkit-transform 150ms ease;
   transition: all 250ms ease-in-out, -webkit-transform 150ms ease;
   transition: all 250ms ease-in-out, transform 150ms ease;
@@ -542,7 +542,7 @@ nav.desktop-nav li:after {
 
 nav.desktop-nav li:hover:after {
   width: 80%;
-  background: #ffd300;
+  background: #a47b5b;
 }
 
 nav.hamburger-nav {
@@ -564,13 +564,13 @@ nav.hamburger-nav {
 }
 
 .menuToggle a {
-  color: #0f0f0f;
+  color: #e8e8e8;
   -webkit-transition: color 0.3s ease;
   transition: color 0.3s ease;
 }
 
 .menuToggle a:hover {
-  color: #ffd300;
+  color: #a47b5b;
 }
 
 .menuToggle input {
@@ -648,7 +648,7 @@ nav.hamburger-nav {
   padding: 50px;
   padding-top: 125px;
   height: 100vh;
-  background: #ffffff;
+  background: #625146;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   /* to stop flickering of text in safari */
@@ -682,12 +682,16 @@ h1 {
 section.about {
   min-height: 100vh;
   position: relative;
-  background: #b3d4fc;
+  background: #e8e8e8;
 }
 
 section.about h2 {
-  text-align: center;
-  padding: 50px 0 30px 0;
+  padding: 50px 0 0 0;
+}
+
+section.about hr {
+  margin: 50px 0 40px 0;
+  border: 1px solid #897b78;
 }
 
 .split {
@@ -697,6 +701,7 @@ section.about h2 {
 }
 
 .about-me {
+  padding-top: 50px;
   width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -873,7 +878,7 @@ form textarea::placeholder {
 }
 
 form input {
-  border-bottom: 1px solid #ffd300;
+  border-bottom: 1px solid #a47b5b;
 }
 
 form .user-info {
@@ -888,7 +893,7 @@ form .email {
 }
 
 form textarea {
-  border: 1px solid #ffd300;
+  border: 1px solid #a47b5b;
   resize: none;
 }
 

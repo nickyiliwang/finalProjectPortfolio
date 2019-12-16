@@ -1,13 +1,15 @@
 // variables
 
 // font colours
-$primaryYellow: #ffd300;
+$primaryBrown: #a47b5b;
+$primaryDarkBrown: #625146;
+$primaryDarkGrey: #afa9aa;
 $primaryBlack: #0f0f0f;
 $primaryWhite: #ffffff;
 
 // background colors
 $primaryBackgroundBlack: #171b0e;
-$primaryBackgroundGrey: #b3d4fc;
+$primaryBackgroundGrey: #e8e8e8;
 
 // mixins
 // Centering
@@ -15,6 +17,15 @@ $primaryBackgroundGrey: #b3d4fc;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@mixin primaryBackgroundGradient {
+  background: rgb(137, 123, 120);
+  background: linear-gradient(
+    100deg,
+    rgba(137, 123, 120, 1) 0%,
+    rgba(175, 170, 167, 1) 70%
+  );
 }
 
 @mixin boxShadow {
