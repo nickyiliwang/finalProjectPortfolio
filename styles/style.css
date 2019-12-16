@@ -811,7 +811,7 @@ section.about hr {
 }
 
 section.projects {
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
 }
 
