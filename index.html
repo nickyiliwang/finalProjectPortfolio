@@ -25,7 +25,7 @@
       <nav class="desktop-nav">
         <div class="wrapper flexContainer">
           <div class="logo-icon">
-            <h2>NW</h2>
+            <h2 onClick="document.location.reload(true)">NW</h2>
           </div>
           <div class="menu">
             <ul>
@@ -65,17 +65,18 @@
             <p>a Gamer</p>
             <p>a Good friend</p>
           </div>
+          <span id="typed"></span>
         </h2>
-        <span id="typed"></span>
+
+        <!-- scroll down arrow -->
+        <a href="#main-content">
+          <svg class="arrows bounce">
+            <path class="a1" d="M0 0 L30 32 L60 0"></path>
+            <path class="a2" d="M0 20 L30 52 L60 20"></path>
+            <path class="a3" d="M0 40 L30 72 L60 40"></path>
+          </svg>
+        </a>
       </div>
-      <!-- scroll down arrow -->
-      <a href="#main-content">
-        <svg class="arrows bounce">
-          <path class="a1" d="M0 0 L30 32 L60 0"></path>
-          <path class="a2" d="M0 20 L30 52 L60 20"></path>
-          <path class="a3" d="M0 40 L30 72 L60 40"></path>
-        </svg>
-      </a>
     </header>
     <!-- end of header -->
     <!-- main -->
@@ -99,31 +100,49 @@
               </div>
               <!-- end of image container -->
               <div class="content">
-                <h3>Bio:</h3>
+                <h3>Nice to meet you, I'm...</h3>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Harum, vel molestias sit numquam repudiandae expedita
-                  consequuntur laudantium ipsa rerum quia tempora mollitia,
-                  deserunt reprehenderit. Veniam vitae aut aperiam dolorum
-                  voluptatum quia mollitia dolor maiores nulla provident! Quo
-                  totam animi veritatis.
+                  Nick (Yili) Wang, a front end developer based in Toronto. I am
+                  a recent graduate of the Juno College of Technology (formerly
+                  HackerYou).
+                </p>
+                <p>
+                  Earning a Bachelor of Industrial Design from OCADu, gives me
+                  perspective on user centered design thinking and the ability
+                  to communicate effectively with designers.
+                </p>
+                <p>
+                  Previously working in a team environment made me love the
+                  feeling of collaboration to accomplish a common goal.
                 </p>
               </div>
             </div>
             <!-- end of about me -->
             <div class="my-skills">
+              <h3>Skills & Toolbox</h3>
               <ul>
                 <li><i class="fab fa-html5"></i></li>
                 <li><i class="fab fa-css3-alt"></i></li>
-                <li><i class="fab fa-js"></i></li>
                 <li><i class="fab fa-sass"></i></li>
+                <li><i class="fab fa-js"></i></li>
                 <li><i class="fab fa-react"></i></li>
+
                 <li><i class="fab fa-github"></i></li>
               </ul>
             </div>
             <!-- end of my skills -->
+            <!-- scroll down arrow -->
+            <a href="#projects">
+              <svg class="arrows bounce">
+                <path class="a1" d="M0 0 L30 32 L60 0"></path>
+                <path class="a2" d="M0 20 L30 52 L60 20"></path>
+                <path class="a3" d="M0 40 L30 72 L60 40"></path>
+              </svg>
+            </a>
           </div>
+          <!-- end of split -->
         </div>
+        <!-- end of wrapper -->
       </section>
       <section class="projects" id="projects">
         <div class="wrapper">

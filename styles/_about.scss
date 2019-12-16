@@ -1,9 +1,10 @@
 section.about {
   height: 100vh;
+  position: relative;
 
   h2 {
     text-align: center;
-    padding-top: 30px;
+    padding: 50px 0;
   }
 }
 
@@ -13,15 +14,15 @@ section.about {
 
 .about-me {
   width: 50%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 
   .imageContainer {
-    width: 500px;
-    height: 667px;
-    position: relative;
+    width: 250px;
+    height: 334px;
     perspective: 800px;
-
-    /*important for how "in yo face" the flip is. The lower the value, the closer you will view the transform" */
-    /*transform-style: preserve-3d;*/
+    transform-style: preserve-3d;
   }
 
   .front-image {
@@ -39,7 +40,6 @@ section.about {
   }
 
   .back-image {
-    /*By Default set the back to be rotate */
     transform: rotateY(180deg);
   }
 
@@ -55,5 +55,4 @@ section.about {
 
 .my-skills {
   width: 50%;
-  background: red;
 }
