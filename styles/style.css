@@ -473,6 +473,22 @@ img {
   }
 }
 
+@media only screen and (max-width: 414px) {
+  html,
+  body {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  nav.desktop-nav {
+    display: none;
+  }
+  nav.hamburger-nav {
+    display: block;
+  }
+}
+
 nav.desktop-nav {
   padding: 20px 0;
   background: #ffffff;
@@ -547,7 +563,7 @@ nav.hamburger-nav {
   position: fixed;
   right: 100px;
   top: 100px;
-  z-index: 99999;
+  z-index: 99;
 }
 
 .menuToggle {
@@ -678,8 +694,25 @@ header {
   position: relative;
 }
 
-h1 {
+header .header-content {
   padding-top: 30vh;
+}
+
+@media only screen and (max-width: 650px) {
+  header .header-content {
+    padding-top: 15vh;
+    position: relative;
+  }
+  header h1, header h2 {
+    background: rgba(232, 232, 232, 0.3);
+    padding: 0 10px;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  header {
+    background-position: right;
+  }
 }
 
 section.about {
@@ -834,6 +867,22 @@ section.about hr {
   }
 }
 
+@media only screen and (max-width: 1024px) {
+  .split {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .about-me {
+    padding-top: 50px;
+    width: 100%;
+  }
+}
+
 section.projects {
   min-height: 100vh;
   padding-bottom: 100px;
@@ -850,6 +899,16 @@ section.projects ul li {
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 80px;
+}
+
+section.projects li:nth-of-type(2n) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
 }
 
 section.projects .imageContainer,
@@ -884,6 +943,26 @@ section.projects .inverted {
 @media only screen and (max-width: 1024px) {
   section.projects .imageContainer {
     padding-top: 20px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  section.projects ul li {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  section.projects li:nth-of-type(2n) {
+    display: block;
+  }
+  section.projects .inverted {
+    text-align: center;
+  }
+  section.projects .imageContainer,
+  section.projects .contentContainer {
+    width: 100%;
   }
 }
 
@@ -995,6 +1074,18 @@ form .email {
 form textarea {
   border: 1px solid #a47b5b;
   resize: none;
+}
+
+@media only screen and (max-width: 1024px) {
+  form {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  form {
+    width: 90%;
+  }
 }
 
 footer {

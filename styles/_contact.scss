@@ -72,3 +72,18 @@ form {
     resize: none;
   }
 }
+
+
+@include mq($max-width: 1024px) {
+  form {
+    width: 70%;
+  }
+}
+
+
+
+@include mq($max-width: 650px) {
+  form {
+    width: 90%;
+  }
+}

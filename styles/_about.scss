@@ -109,9 +109,7 @@ section.about {
     ul.skills-icon {
       width: 50vw;
       margin: 0 auto;
-
     }
-
   }
 }
 
@@ -122,9 +120,17 @@ section.about {
     ul.skills-icon {
       width: 60vw;
       margin: 0 auto;
-
     }
-
   }
 }
 
+@include mq($max-width: 1024px) {
+  .split {
+    display: flex;
+    flex-direction: column;
+  }
+  .about-me {
+    padding-top: 50px;
+    width: 100%;
+  }
+}
