@@ -23,7 +23,8 @@
       href="./assets/favicon/favicon-16x16.png"
     />
     <link rel="manifest" href="./assets/favicon/site.webmanifest" />
-
+    <!-- animate on scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- font-awesome -->
     <link
       rel="stylesheet"
@@ -155,7 +156,6 @@
               <li>
                 <img
                   src="./assets/skills/html5.png"
-                  title="html5"
                   alt="hyper text markup language logo"
                 />
               </li>
@@ -163,7 +163,6 @@
               <li>
                 <img
                   src="./assets/skills/css3.png"
-                  title="css3"
                   alt="Cascading Style Sheets 3 logo"
                 />
               </li>
@@ -171,22 +170,16 @@
               <li>
                 <img
                   src="./assets/skills/javaScript.png"
-                  title="javaScript"
                   alt="javaScript logo"
                 />
               </li>
               <!-- jQuery -->
               <li>
-                <img
-                  src="./assets/skills/jQuery.png"
-                  title="jQuery"
-                  alt="jQuery logo"
-                />
+                <img src="./assets/skills/jQuery.png" alt="jQuery logo" />
               </li>
               <li>
                 <img
                   src="./assets/skills/Accessibility.png"
-                  title="accessibility"
                   alt="accessibility logo"
                 />
               </li>
@@ -194,38 +187,21 @@
               <li>
                 <img
                   src="./assets/skills/firebase.png"
-                  title="firebase"
                   alt="google firebase logo"
                 />
               </li>
 
               <li>
-                <img
-                  src="./assets/skills/react.png"
-                  title="reactJs"
-                  alt="react js logo"
-                />
+                <img src="./assets/skills/react.png" alt="react js logo" />
               </li>
               <li>
-                <img
-                  src="./assets/skills/redux.png"
-                  title="redux"
-                  alt="redux logo"
-                />
+                <img src="./assets/skills/redux.png" alt="redux logo" />
               </li>
               <li>
-                <img
-                  src="./assets/skills/sass.png"
-                  title="sass"
-                  alt="sass logo"
-                />
+                <img src="./assets/skills/sass.png" alt="sass logo" />
               </li>
               <li>
-                <img
-                  src="./assets/skills/vscode.png"
-                  title="vsCode"
-                  alt="vsCode logo"
-                />
+                <img src="./assets/skills/vscode.png" alt="vsCode logo" />
               </li>
             </ul>
           </div>
@@ -253,15 +229,14 @@
               <div class="imageContainer">
                 <a href="https://rate-my-chonk.firebaseapp.com/" target="_blank"
                   ><img
-                    title="Rate my chonk"
-                    src="./assets/projects/rate-my-chonkers.png"
+                    src="./assets/projects/rate.png"
                     alt="Rate my chonk demo page"
                 /></a>
               </div>
-              <div class="contentContainer">
+              <div class="contentContainer" data-aos="fade-right">
                 <h3>Rate my Chonk</h3>
                 <p>
-                  React | Redux | Firebase |ReactRouter | Axios | Sass |
+                  React | Redux | Firebase | React Router | Axios | Sass |
                   Responsive |
                 </p>
                 <p>
@@ -270,53 +245,61 @@
                   that let's you browse, upload, vote, and favorite cat
                   pictures. But there's more! Come find out for yourself!
                 </p>
-                <a href="https://rate-my-chonk.firebaseapp.com/" target="_blank"
-                  >View Live</a
-                >
-                <a
-                  href="https://github.com/nickyiliwang/nickWangProject5RateMyChonk"
-                  target="_blank"
-                  >Github Repo</a
-                >
+                <div class="external-link">
+                  <a
+                    class="button"
+                    href="https://rate-my-chonk.firebaseapp.com/"
+                    target="_blank"
+                    >View Live</a
+                  >
+                  <a
+                    class="button"
+                    href="https://github.com/nickyiliwang/nickWangProject5RateMyChonk"
+                    target="_blank"
+                    >Github Repo</a
+                  >
+                </div>
               </div>
             </li>
             <!-- Not-So-Social -->
             <li>
+              <div class="contentContainer inverted" data-aos="fade-left">
+                <h3>Not So Social</h3>
+                <p>
+                  Mob Programming | React | Firebase | REST API | Sass | React
+                  Router |
+                </p>
+                <p>
+                  Dinner dates, bachelor parties, prom nights, and game nights.
+                  These social events are fantastic, but think about the mess,
+                  expensive outings, and rowdy crowd. Hard pass. Why not fill
+                  the time with some great TV shows during these social events
+                  in the comfort of your own home with or without a crowd. This
+                  app is created by a team of 4.
+                </p>
+                <div class="external-link">
+                  <a
+                    class="button"
+                    href="https://not-so-social.github.io/notSoSocial/"
+                    target="_blank"
+                    >View Live</a
+                  >
+                  <a
+                    class="button"
+                    href="https://github.com/nickyiliwang/notSoSocial"
+                    target="_blank"
+                    >Github Repo</a
+                  >
+                </div>
+              </div>
               <div class="imageContainer">
                 <a
                   href="https://not-so-social.github.io/notSoSocial/"
                   target="_blank"
                   ><img
-                    title="notSoSocial: agency style collaboration project demo"
-                    src="./assets/projects/"
+                    src="./assets/projects/nososocial.png"
                     alt="notSoSocial: agency style collaboration project demo"
                 /></a>
-              </div>
-              <div class="contentContainer">
-                <h3>Not So Social</h3>
-                <p>
-                  Mod Programming|React|Firebase|REST
-                  API|Axios|Sass|ReactRouter|
-                </p>
-                <p>
-                  This project uses firebase as backend to store events, user
-                  can generate their own events from the app, each event has a
-                  gif representing it as a background, fetched from Giphy API.
-                  Once the user selects which event and when, we fetch tv shows
-                  running that day from the TvMaze API, and the user can pick a
-                  tv show to watch instead of going to the event. This app is
-                  created by a team of 4.
-                </p>
-                <a
-                  href="https://not-so-social.github.io/notSoSocial/"
-                  target="_blank"
-                  >View Live</a
-                >
-                <a
-                  href="https://github.com/nickyiliwang/notSoSocial"
-                  target="_blank"
-                  >Github Repo</a
-                >
               </div>
             </li>
             <!-- Pointless Paws -->
@@ -325,91 +308,65 @@
                 <a
                   href="https://nickyiliwang.github.io/nickWangProjectThreePointlessPaws/"
                   target="_blank"
-                  ><img
-                    title="Pointless Paws"
-                    src="./assets/paws.JPG"
-                    alt="Pointless Paws"
+                  ><img src="./assets/projects/paw.png" alt="Pointless Paws"
                 /></a>
               </div>
-              <div class="contentContainer">
+              <div class="contentContainer" data-aos="fade-right">
                 <h3>Pointless Paws</h3>
-                <p>jQuery|Sass|Html5|</p>
+                <p>jQuery | Sass | Html5 |</p>
                 <p>
                   Just Turn off the light, but really, its so bright, you hate
                   lights and you want to sleep, just click the switch and turn
                   off the lights.
                 </p>
-                <a
-                  href="https://nickyiliwang.github.io/nickWangProjectThreePointlessPaws/"
-                  >View Live</a
-                >
-                <a
-                  href="https://nickyiliwang.github.io/nickWangProjectThreePointlessPaws/"
-                  target="_blank"
-                  >Github Repo</a
-                >
+                <div class="external-link">
+                  <a
+                    class="button"
+                    href="https://nickyiliwang.github.io/nickWangProjectThreePointlessPaws/"
+                    >View Live</a
+                  >
+                  <a
+                    class="button"
+                    href="https://github.com/nickyiliwang/nickWangProjectThreePointlessPaws"
+                    target="_blank"
+                    >Github Repo</a
+                  >
+                </div>
               </div>
             </li>
             <!-- PSD Convert -->
             <li>
+              <div class="contentContainer inverted" data-aos="fade-left">
+                <h3>PSD Conversion: Restaurant Mall</h3>
+                <p>Html5 | Scss |</p>
+                <p>
+                  This project is a multi-page PSD conversion to a fully
+                  responsive site using HTML and CSS, design with animations and
+                  hover effects.
+                </p>
+                <div class="external-link">
+                  <a
+                    class="button"
+                    href="https://rate-my-chonk.firebaseapp.com/"
+                    target="_blank"
+                    >View Live</a
+                  >
+                  <a
+                    class="button"
+                    href="https://github.com/nickyiliwang/nick-wang-project-2-resturaunt"
+                    target="_blank"
+                    >Github Repo</a
+                  >
+                </div>
+              </div>
               <div class="imageContainer">
                 <a
                   href="https://nickyiliwang.github.io/nick-wang-project-2-resturaunt/"
                   target="_blank"
                   ><img
-                    title="PDF Conversion: Restaurant Mall"
-                    src="./assets/rest.JPG"
+                    src="./assets/projects/resturant.png"
                     alt="PDF Conversion: Restaurant Mall"
                 /></a>
-              </div>
-              <div class="contentContainer">
-                <h3>PSD Conversion: Restaurant Mall</h3>
-                <p>Html5|Scss|</p>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Aperiam quae earum repellat expedita, aut dignissimos possimus
-                  maxime porro, natus, labore magnam! Cumque placeat culpa alias
-                  cum magnam error ab ducimus.
-                </p>
-                <a href="https://rate-my-chonk.firebaseapp.com/" target="_blank"
-                  >View Live</a
-                >
-                <a
-                  href="https://github.com/nickyiliwang/nickWangProject5RateMyChonk"
-                  target="_blank"
-                  >Github Repo</a
-                >
-              </div>
-            </li>
-            <!-- CodeAlong Catsby -->
-            <li>
-              <div class="imageContainer">
-                <a href="https://rate-my-chonk.firebaseapp.com/" target="_blank"
-                  ><img
-                    title="Rate my chonk"
-                    src="./assets/projects/rate-my-chonkers.png"
-                    alt="Rate my chonk"
-                /></a>
-              </div>
-              <div class="contentContainer">
-                <h3>Code Along: Social Media Clone</h3>
-                <p>
-                  React|Redux|Firebase|NodeJs|Express|MaterialUI|ReactRouter|
-                </p>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Aperiam quae earum repellat expedita, aut dignissimos possimus
-                  maxime porro, natus, labore magnam! Cumque placeat culpa alias
-                  cum magnam error ab ducimus.
-                </p>
-                <a href="https://rate-my-chonk.firebaseapp.com/" target="_blank"
-                  >View Live</a
-                >
-                <a
-                  href="https://github.com/nickyiliwang/nickWangProject5RateMyChonk"
-                  target="_blank"
-                  >Github Repo</a
-                >
               </div>
             </li>
           </ul>
@@ -428,11 +385,11 @@
       <!-- end of projects section -->
       <!-- contact -->
       <section class="contact" id="contact">
-        <div class="wrapper">
+        <div class="wrapper flexContainer">
           <h2>Contact</h2>
-
           <form
-            action="http://www.focuspocus.io/magic/ed6b2214b5393b5129306b30a9a7eaa7"
+            action="
+            http://www.focuspocus.io/magic/ed6b2214b5393b5129306b30a9a7eaa7"
             method="POST"
           >
             <label for="name">Your Name:</label>
@@ -450,36 +407,33 @@
             <label>
               Message:
             </label>
-            <textarea name="message" name="message" id="message"></textarea>
+            <textarea
+              name="message"
+              name="message"
+              id="message"
+              rows="4"
+            ></textarea>
             <input type="submit" value="Send" />
             <ul class="socials">
               <li>
-                <a
-                  title="https://github.com/nickyiliwang"
-                  href="https://github.com/nickyiliwang"
-                  target="_blank"
+                <a href="https://github.com/nickyiliwang" target="_blank"
                   ><i class="fab fa-github"></i
                 ></a>
               </li>
               <li>
                 <a
-                  title="https://ca.linkedin.com/in/nickyiliwang"
                   href="https://ca.linkedin.com/in/nickyiliwang"
                   target="_blank"
                   ><i class="fab fa-linkedin"></i
                 ></a>
               </li>
               <li>
-                <a
-                  title="https://twitter.com/nickyiliwang"
-                  href="https://twitter.com/nickyiliwang"
-                  target="_blank"
+                <a href="https://twitter.com/nickyiliwang" target="_blank"
                   ><i class="fab fa-twitter"></i
                 ></a>
               </li>
               <li>
                 <a
-                  title="https://www.artstation.com/nickyiliwang"
                   href="https://www.artstation.com/nickyiliwang"
                   target="_blank"
                   ><i class="fab fa-artstation"></i
@@ -506,6 +460,8 @@
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
     <!-- main script -->
     <script>
+      AOS.init();
+
       window.onscroll = function() {
         scrollFunction();
       };
@@ -527,7 +483,6 @@
         });
       });
 
-      AOS.init();
       const scroll = new SmoothScroll('a[href*="#"]');
       const typed = new Typed("#typed", {
         stringsElement: "#typed-strings",

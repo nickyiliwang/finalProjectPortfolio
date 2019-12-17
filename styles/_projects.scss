@@ -1,0 +1,36 @@
+section.projects {
+  min-height: 100vh;
+  padding-bottom: 100px;
+  position: relative;
+
+  h2 {
+    text-align: center;
+    padding: 50px 0;
+  }
+
+  ul li {
+    display: flex;
+    margin-bottom: 80px;
+  }
+
+  .imageContainer,
+  .contentContainer {
+    margin: 0 10px;
+    width: calc(50% - 40px);
+    .external-link {
+      margin-top: 20px;
+    }
+  }
+
+  .contentContainer {
+    display: flex;
+    flex-direction: column;
+    * {
+      margin: 5px;
+    }
+  }
+
+  .inverted {
+    text-align: right;
+  }
+}

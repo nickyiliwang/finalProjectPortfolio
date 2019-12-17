@@ -289,9 +289,8 @@ h4 {
 }
 
 p {
-  font-size: 20px;
-  font-size: 1rem;
-  font-weight: 400;
+  font-size: 19px;
+  font-size: 0.95rem;
   line-height: 28px;
 }
 
@@ -307,15 +306,16 @@ span {
   outline: 0;
 }
 
-button,
+.button,
 input[type="submit"] {
   font-size: 22.4px;
   font-size: 1.12rem;
   font-weight: 600;
   line-height: 58px;
   letter-spacing: 0.8px;
+  border-radius: 5px;
   padding: 0 10px;
-  background: #a47b5b;
+  background: #afa9aa;
   color: #0f0f0f;
   text-decoration: none;
   display: inline-block;
@@ -330,29 +330,19 @@ a {
   text-decoration: none;
 }
 
-.inverted {
-  color: #ffffff;
-  background: #0f0f0f;
-}
-
-.inverted:hover, .inverted:focus {
-  background: #a47b5b;
-  color: #0f0f0f;
-}
-
-button:hover,
-button:focus,
+.button:hover,
+.button:focus,
 input[type="submit"]:hover,
 input[type="submit"]:focus {
-  background: #ffffff;
+  background: #a47b5b;
 }
 
-button:focus {
+.button:focus {
   outline: 2px solid red;
   outline-offset: -4px;
 }
 
-button:active {
+.button:active {
   -webkit-transform: scale(0.99);
           transform: scale(0.99);
 }
@@ -812,30 +802,96 @@ section.about hr {
 
 section.projects {
   min-height: 100vh;
+  padding-bottom: 100px;
   position: relative;
 }
 
 section.projects h2 {
   text-align: center;
-  padding: 50px 0 30px 0;
+  padding: 50px 0;
 }
 
 section.projects ul li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-bottom: 80px;
 }
 
-section.projects .imageContainer {
-  width: 50%;
+section.projects .imageContainer,
+section.projects .contentContainer {
+  margin: 0 10px;
+  width: calc(50% - 40px);
+}
+
+section.projects .imageContainer .external-link,
+section.projects .contentContainer .external-link {
+  margin-top: 20px;
 }
 
 section.projects .contentContainer {
-  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+section.projects .contentContainer * {
+  margin: 5px;
+}
+
+section.projects .inverted {
+  text-align: right;
 }
 
 section.contact {
   height: 100vh;
+  padding: 50px 0;
+  background: url(../assets/contact.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+section.contact h2 {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+section.contact .flexContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section.contact .socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section.contact .socials li:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+i.fab {
+  font-size: 30px;
+  font-size: 1.5rem;
+  padding: 0 20px;
 }
 
 form {
@@ -846,6 +902,10 @@ form {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  background: rgba(232, 232, 232, 0.8);
+  width: 50%;
+  border-radius: 20px;
+  padding: 50px;
 }
 
 form input,
@@ -854,7 +914,6 @@ form textarea {
   border: none;
   margin: 20px 10px;
   padding: 20px;
-  color: #ffffff;
 }
 
 form input::-webkit-input-placeholder,
@@ -903,3 +962,4 @@ footer {
   padding: 10px;
   text-align: center;
 }
+/*# sourceMappingURL=style.css.map */

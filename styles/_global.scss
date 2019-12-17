@@ -46,8 +46,7 @@ h4 {
 }
 
 p {
-  @include fontSize(20);
-  font-weight: 400;
+  @include fontSize(19);
   line-height: 28px;
 }
 
@@ -65,14 +64,15 @@ span {
   outline: 0;
 }
 
-button,
+.button,
 input[type="submit"] {
   @include fontSize(22.4);
   font-weight: 600;
   line-height: 58px;
   letter-spacing: 0.8px;
+  border-radius: 5px;
   padding: 0 10px;
-  background: $primaryBrown;
+  background: $primaryDarkGrey;
   color: $primaryBlack;
   text-decoration: none;
   display: inline-block;
@@ -84,30 +84,19 @@ a {
   text-decoration: none;
 }
 
-// buttons with inverted colors
-.inverted {
-  color: $primaryWhite;
-  background: $primaryBlack;
-  &:hover,
-  &:focus {
-    background: $primaryBrown;
-    color: $primaryBlack;
-  }
-}
-
-button:hover,
-button:focus,
+.button:hover,
+.button:focus,
 input[type="submit"]:hover,
 input[type="submit"]:focus {
-  background: $primaryWhite;
+  background: $primaryBrown;
 }
 
-button:focus {
+.button:focus {
   outline: 2px solid red;
   outline-offset: -4px;
 }
 
-button:active {
+.button:active {
   transform: scale(0.99);
 }
 // end of button
