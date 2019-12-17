@@ -1,13 +1,16 @@
-DEMO: https://nickyiliwang.github.io/finalProjectPortfolio/.
+Portfolio page made in 2019 Dec
 
-1. cat1 Photo by Clément Falize on Unsplash
-2. Photo by Borna Bevanda on Unsplash cats
-Photo by Jonas Vincent on Unsplash
+DEMO: https://nickyiliwang.github.io/finalProjectPortfolio/
+LIVE DOMAIN: nickyiliwang.com
 
+Header Photo by Borna Bevanda on Unsplash
+Contact Photo by Quino Al on Unsplash
+hamburger Css inspired by Erik Terwan
 
-1)  Photo by Quino Al on Unsplash
-2)  Photo by Neven Krcmarek on Unsplash
-3)  vertical Photo by Plush Design Studio on Unsplash
+Portfolio Inspiration:
+http://www.canrozanes.com/
+http://julienbigras.com/
+http://www.tuni.tech/
+http://jenelle.codes/
 
-
-Erik Terwan for hamburger
+Special Thanks to Lucas Chan and mom for keeping me company in desperate times

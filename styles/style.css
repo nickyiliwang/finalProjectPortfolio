@@ -662,6 +662,7 @@ header {
   background: url(../assets/header.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: right;
   position: relative;
 }
 
@@ -693,6 +694,7 @@ section.about hr {
 .about-me {
   padding-top: 50px;
   width: 50%;
+  margin-right: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -776,7 +778,7 @@ section.about hr {
 }
 
 .my-skills ul li {
-  margin: 5px 0;
+  margin: 5px;
   border: 1px solid #0f0f0f;
   padding: 20px;
   border-radius: 50%;
@@ -796,8 +798,8 @@ section.about hr {
 }
 
 .my-skills ul img {
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
 }
 
 section.projects {
@@ -892,6 +894,7 @@ i.fab {
   font-size: 30px;
   font-size: 1.5rem;
   padding: 0 20px;
+  color: #0f0f0f;
 }
 
 form {

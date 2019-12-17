@@ -19,8 +19,8 @@ section.about {
 
 .about-me {
   padding-top: 50px;
-
   width: 50%;
+  margin-right: 40px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -80,7 +80,7 @@ section.about {
     flex-wrap: wrap;
 
     li {
-      margin: 5px 0;
+      margin: 5px;
       border: 1px solid $primaryBlack;
       padding: 20px;
       border-radius: 50%;
@@ -96,8 +96,8 @@ section.about {
     }
 
     img {
-      width: 80px;
-      height: 80px;
+      width: 60px;
+      height: 60px;
     }
   }
 }
