@@ -74,7 +74,7 @@ section.about {
     margin: 10px 0;
   }
 
-  ul {
+  ul.skills-icon {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -101,3 +101,30 @@ section.about {
     }
   }
 }
+
+@include mq($max-width: 1400px) {
+  .my-skills {
+    padding-bottom: 150px;
+
+    ul.skills-icon {
+      width: 50vw;
+      margin: 0 auto;
+
+    }
+
+  }
+}
+
+@include mq($max-width: 1024px) {
+  .my-skills {
+    padding-bottom: 110px;
+
+    ul.skills-icon {
+      width: 60vw;
+      margin: 0 auto;
+
+    }
+
+  }
+}
+

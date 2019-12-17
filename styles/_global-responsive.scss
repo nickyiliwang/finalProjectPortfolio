@@ -1,0 +1,6 @@
+@include mq($max-width: 1024px) {
+  html,
+  body {
+    font-size: 16px;
+  }
+}

@@ -34,3 +34,15 @@ section.projects {
     text-align: right;
   }
 }
+
+@include mq($max-width: 1024px) {
+  section.projects {
+
+
+  .imageContainer {
+    padding-top: 20px;
+
+  }
+
+  }
+}

@@ -276,7 +276,7 @@ h2 {
 h3 {
   font-size: 30px;
   font-size: 1.5rem;
-  line-height: 58px;
+  line-height: 38px;
   letter-spacing: 0.8px;
 }
 
@@ -463,6 +463,13 @@ img {
   60% {
     -webkit-transform: translateY(-15px);
             transform: translateY(-15px);
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  html,
+  body {
+    font-size: 16px;
   }
 }
 
@@ -657,6 +664,11 @@ nav.hamburger-nav {
   font-size: 22px;
 }
 
+.menuToggle .menu i.fab {
+  padding: 0;
+  color: #e8e8e8;
+}
+
 header {
   height: 100vh;
   background: url(../assets/header.jpg);
@@ -766,7 +778,7 @@ section.about hr {
   margin: 10px 0;
 }
 
-.my-skills ul {
+.my-skills ul.skills-icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -777,7 +789,7 @@ section.about hr {
       flex-wrap: wrap;
 }
 
-.my-skills ul li {
+.my-skills ul.skills-icon li {
   margin: 5px;
   border: 1px solid #0f0f0f;
   padding: 20px;
@@ -789,7 +801,7 @@ section.about hr {
   transition: all 0.3s linear;
 }
 
-.my-skills ul li:hover {
+.my-skills ul.skills-icon li:hover {
   -webkit-filter: grayscale(0);
   /* Safari 6.0 - 9.0 */
   filter: grayscale(0);
@@ -797,9 +809,29 @@ section.about hr {
   transition: all 0.3s linear;
 }
 
-.my-skills ul img {
+.my-skills ul.skills-icon img {
   width: 60px;
   height: 60px;
+}
+
+@media only screen and (max-width: 1400px) {
+  .my-skills {
+    padding-bottom: 150px;
+  }
+  .my-skills ul.skills-icon {
+    width: 50vw;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .my-skills {
+    padding-bottom: 110px;
+  }
+  .my-skills ul.skills-icon {
+    width: 60vw;
+    margin: 0 auto;
+  }
 }
 
 section.projects {
@@ -847,6 +879,12 @@ section.projects .contentContainer * {
 
 section.projects .inverted {
   text-align: right;
+}
+
+@media only screen and (max-width: 1024px) {
+  section.projects .imageContainer {
+    padding-top: 20px;
+  }
 }
 
 section.contact {

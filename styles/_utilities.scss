@@ -38,7 +38,7 @@ $primaryBackgroundGrey: #e8e8e8;
   font-size: ($sizeValue/10) * 1rem / 2;
 }
 
-// media queries
+// media queries, credit: rafalbromirski
 @mixin mq($args...) {
   $media-type: "only screen";
   $media-type-key: "media-type";
