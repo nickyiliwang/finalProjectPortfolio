@@ -1,8 +1,7 @@
 section.contact {
   height: 100vh;
   padding: 50px 0;
-  background: url(../assets/contact.jpg);
-  background-repeat: no-repeat;
+  background: url(../assets/contact.jpg) no-repeat;
   background-size: cover;
   position: relative;
 
@@ -18,19 +17,12 @@ section.contact {
   }
 
   .socials {
-    display: flex;
-    justify-content: center;
+    @include flexCenter;
 
     li:hover {
       transform: scale(1.5);
     }
   }
-}
-
-i.fab, i.far {
-  @include fontSize(30);
-  padding: 0 20px;
-  color: $primaryBlack;
 }
 
 // form styles
@@ -58,21 +50,13 @@ form {
     border-bottom: 1px solid $primaryBrown;
   }
 
-  .user-info {
-    display: flex;
-  }
-
-  .name,
-  .email {
-    width: 50%;
-  }
-
   textarea {
     border: 1px solid $primaryBrown;
     resize: none;
   }
 }
 
+// responsive
 
 @include mq($max-width: 1024px) {
   form {
@@ -80,10 +64,14 @@ form {
   }
 }
 
-
+@include mq($max-width: 850px) {
+  form {
+    width: 80%;
+  }
+}
 
 @include mq($max-width: 650px) {
   form {
-    width: 90%;
+    width: 100%;
   }
 }

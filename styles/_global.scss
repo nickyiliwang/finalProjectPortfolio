@@ -1,7 +1,7 @@
 // google fonts
 // font-family: 'Raleway', sans-serif;
 // font-family: 'Roboto', sans-serif;
-@import url("https://fonts.googleapis.com/css?family=Raleway:400,700|Roboto:400,500&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,600,700|Roboto:400,500&display=swap");
 
 // font size
 html,
@@ -27,9 +27,13 @@ h1 {
 
 h2 {
   @include fontSize(50);
-  font-weight: 400;
   line-height: 58px;
+  font-weight: 400;
   letter-spacing: 0.8px;
+}
+
+section h2 {
+  font-weight: 600;
 }
 
 h3 {
@@ -57,6 +61,13 @@ span {
   letter-spacing: 0.8px;
 }
 
+i.fab,
+i.far {
+  @include fontSize(30);
+  padding: 0 20px;
+  color: $primaryBlack;
+}
+
 // button
 
 // remove focus box
@@ -66,15 +77,14 @@ span {
 
 .button,
 input[type="submit"] {
-  @include fontSize(22.4);
+  @include fontSize(22);
   font-weight: 600;
   line-height: 58px;
   letter-spacing: 0.8px;
   border-radius: 5px;
-  padding: 0 10px;
+  padding: 0 20px;
   background: $primaryDarkGrey;
   color: $primaryBlack;
-  text-decoration: none;
   display: inline-block;
   border: none;
   transition: all 250ms ease-in-out, transform 150ms ease;
@@ -115,7 +125,8 @@ img {
 }
 
 // scroll down arrows and bounce animation
-
+// https://codepen.io/postor/pen/mskxI
+// https://codepen.io/bitstarr/pen/XjaJGz
 .arrows {
   position: absolute;
   left: 50%;

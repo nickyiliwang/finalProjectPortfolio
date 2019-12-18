@@ -133,7 +133,7 @@
         <div class="wrapper">
           <div class="split">
             <div class="about-me">
-              <div class="imageContainer">
+              <div class="image-container">
                 <img
                   src="./assets/nick-front.png"
                   alt="Nick photo-shoot, young man smiling standing"
@@ -148,23 +148,24 @@
               <!-- end of image container -->
             </div>
             <!-- end of about me -->
-            <div class="content">
+            <div class="content" data-aos="fade-up">
               <h2>About Me</h2>
-
               <h3>Nice to meet you, I'm...</h3>
               <p>
-                <span>Nick</span> (Yili) Wang, a front end developer based in Toronto. I am a
-                recent graduate of Juno (formerly HackerYou) College of
-                Technology.
+                <span>Nick</span> (Yili) Wang, a front end developer based in
+                Toronto. I am a recent graduate of Juno (formerly HackerYou)
+                College of Technology.
               </p>
               <p>
-                Earning a Bachelor of <span>Industrial Design</span> from OCAD university
-                gives me the perspective on user centered design, and the
-                ability to <span>communicate</span> effectively with other designers.
+                Earning a Bachelor of <span>Industrial Design</span> from OCAD
+                university gives me the perspective on user centered design, and
+                the ability to <span>communicate</span> effectively with other
+                designers.
               </p>
               <p>
-                Previously working in a team environment made me
-                crave the feeling of <span>collaboration</span> to accomplish a common goal.
+                Previously working in a team environment made me crave the
+                feeling of <span>collaboration</span> to accomplish a common
+                goal.
               </p>
               <p>
                 Beside coding, I love <span>cats</span> 🐱,
@@ -179,53 +180,84 @@
           <div class="my-skills">
             <h3>These are my skills, more to come!</h3>
             <ul class="skills-icon">
-              <!-- html -->
-              <li>
+              <!-- HTML5 -->
+              <li data-aos="zoom-out" data-aos-delay="50">
                 <img
                   src="./assets/skills/html5.png"
                   alt="hyper text markup language logo"
                 />
+                <p>
+                  HTML5
+                </p>
               </li>
-              <!-- css -->
-              <li>
+              <!-- CSS3 -->
+              <li data-aos="zoom-out" data-aos-delay="100">
                 <img
                   src="./assets/skills/css3.png"
                   alt="Cascading Style Sheets 3 logo"
                 />
+                <p>
+                  CSS3
+                </p>
+              </li>
+              <!-- SASS -->
+              <li data-aos="zoom-out" data-aos-delay="150">
+                <img src="./assets/skills/sass.png" alt="sass logo" />
+                <p>
+                  SASS
+                </p>
               </li>
               <!-- javaScript -->
-              <li>
+              <li data-aos="zoom-out" data-aos-delay="200">
                 <img
                   src="./assets/skills/javaScript.png"
                   alt="javaScript logo"
                 />
+                <p>
+                  javaScript
+                </p>
               </li>
               <!-- jQuery -->
-              <li>
+              <li data-aos="zoom-out" data-aos-delay="250">
                 <img src="./assets/skills/jQuery.png" alt="jQuery logo" />
+                <p>
+                  jQuery
+                </p>
               </li>
-              <li>
+              <!-- Accessibility -->
+              <li data-aos="zoom-out" data-aos-delay="300">
                 <img
+                  id="accessibility"
                   src="./assets/skills/accessibility.png"
                   alt="accessibility logo"
                 />
+                <p>
+                  Accessibility
+                </p>
               </li>
-
-              <li>
+              <!-- Firebase -->
+              <li data-aos="zoom-out" data-aos-delay="350">
                 <img
                   src="./assets/skills/firebase.png"
                   alt="google firebase logo"
                 />
+                <p>
+                  Firebase
+                </p>
               </li>
-
-              <li>
+              <!-- React -->
+              <li data-aos="zoom-out" data-aos-delay="400">
                 <img src="./assets/skills/react.png" alt="react js logo" />
+                <p>
+                  React
+                </p>
               </li>
-              <li>
+              <!-- Redux -->
+              <li data-aos="zoom-out" data-aos-delay="450">
                 <img src="./assets/skills/redux.png" alt="redux logo" />
-              </li>
-              <li>
-                <img src="./assets/skills/sass.png" alt="sass logo" />
+                <p>
+                  Redux
+                </p>
               </li>
             </ul>
           </div>
@@ -250,14 +282,14 @@
           <ul>
             <!-- Chonkers -->
             <li>
-              <div class="imageContainer">
+              <div class="image-container">
                 <a href="https://rate-my-chonk.firebaseapp.com/" target="_blank"
                   ><img
                     src="./assets/projects/rate.png"
                     alt="Rate my chonk demo page"
                 /></a>
               </div>
-              <div class="contentContainer" data-aos="fade-right">
+              <div class="content-container" data-aos="fade-right">
                 <h3>Rate my Chonk</h3>
                 <p>
                   React | Redux | Firebase | React Router | Axios | Sass |
@@ -287,7 +319,7 @@
             </li>
             <!-- Not-So-Social -->
             <li>
-              <div class="imageContainer">
+              <div class="image-container">
                 <a
                   href="https://not-so-social.github.io/notSoSocial/"
                   target="_blank"
@@ -296,19 +328,17 @@
                     alt="notSoSocial: agency style collaboration project demo"
                 /></a>
               </div>
-              <div class="contentContainer inverted" data-aos="fade-left">
+              <div class="content-container inverted" data-aos="fade-left">
                 <h3>Not So Social</h3>
                 <p>
                   Mob Programming | React | Firebase | REST API | Sass | React
                   Router |
                 </p>
                 <p>
-                  Dinner dates, bachelor parties, prom nights, and game nights.
-                  These social events are fantastic, but think about the mess,
-                  expensive outings, and rowdy crowd. Hard pass. Why not fill
-                  the time with some great TV shows during these social events
-                  in the comfort of your own home with or without a crowd. This
-                  app is created by a team of 4.
+                  This app is created by a team of 4. You can create/select an
+                  event want to attend this week, but ditch that event and watch
+                  an amazing Tv show we recommend. Created using 2 different
+                  APIS and firebase.
                 </p>
                 <div class="external-link">
                   <a
@@ -328,14 +358,14 @@
             </li>
             <!-- Pointless Paws -->
             <li>
-              <div class="imageContainer">
+              <div class="image-container">
                 <a
                   href="https://nickyiliwang.github.io/nickWangProjectThreePointlessPaws/"
                   target="_blank"
                   ><img src="./assets/projects/paw.png" alt="Pointless Paws"
                 /></a>
               </div>
-              <div class="contentContainer" data-aos="fade-right">
+              <div class="content-container" data-aos="fade-right">
                 <h3>Pointless Paws</h3>
                 <p>jQuery | Sass | Html5 |</p>
                 <p>
@@ -360,7 +390,7 @@
             </li>
             <!-- PSD Convert -->
             <li>
-              <div class="imageContainer">
+              <div class="image-container">
                 <a
                   href="https://nickyiliwang.github.io/nick-wang-project-2-resturaunt/"
                   target="_blank"
@@ -369,7 +399,7 @@
                     alt="PDF Conversion: Restaurant Mall"
                 /></a>
               </div>
-              <div class="contentContainer inverted" data-aos="fade-left">
+              <div class="content-container inverted" data-aos="fade-left">
                 <h3>PSD Conversion: Restaurant Mall</h3>
                 <p>Html5 | Scss |</p>
                 <p>
@@ -427,15 +457,23 @@
             <label for="email">
               Your Email:
             </label>
-            <input type="email" name="email" id="email" placeholder="email" />
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="email"
+              required
+            />
             <label>
               Message:
             </label>
             <textarea
               name="message"
               name="message"
+              required
               id="message"
               rows="4"
+              placeholder="Cats ? Cats, Cats! Please send cute cat pics, videos, gifs, anything will do. Thanks 🐱"
             ></textarea>
             <input type="submit" value="Send" />
             <ul class="socials">
