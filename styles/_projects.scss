@@ -48,7 +48,7 @@ section.projects {
   }
 }
 
-@include mq($max-width: 650px) {
+@include mq($max-width: 850px) {
   section.projects {
     ul li {
       flex-direction: column;

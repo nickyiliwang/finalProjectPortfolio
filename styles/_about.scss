@@ -66,6 +66,13 @@ section.about {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  span {
+    @include fontSize(24);
+    line-height: 28px;
+    letter-spacing: 0.8px;
+    color: $primaryBrown;
+  }
 }
 
 .my-skills {
@@ -102,7 +109,7 @@ section.about {
   }
 }
 
-@include mq($max-width: 1400px) {
+@include mq($max-width: 1300px) {
   .my-skills {
     padding-bottom: 150px;
 
@@ -118,19 +125,27 @@ section.about {
     padding-bottom: 110px;
 
     ul.skills-icon {
-      width: 60vw;
       margin: 0 auto;
     }
   }
 }
 
-@include mq($max-width: 1024px) {
+@include mq($max-width: 850px) {
   .split {
-    display: flex;
     flex-direction: column;
+    justify-content: center;
   }
   .about-me {
     padding-top: 50px;
     width: 100%;
+  }
+}
+
+
+@include mq($max-width: 650px) {
+  .my-skills {
+    ul.skills-icon {
+      width: 70vw;
+    }
   }
 }

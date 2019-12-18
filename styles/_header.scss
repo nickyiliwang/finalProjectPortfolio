@@ -14,15 +14,15 @@ header {
 @include mq($max-width: 650px) {
   header {
     .header-content {
-      padding-top: 15vh;
+      padding-top: 10vh;
       position: relative;
     }
 
-    h1, h2 {
-      background: rgba($primaryBackgroundGrey, 0.3);
+    h1,
+    h2 {
+      background: rgba($primaryBackgroundGrey, 0.5);
       padding: 0 10px;
     }
-
   }
 }
 

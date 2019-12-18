@@ -470,6 +470,16 @@ img {
   html,
   body {
     font-size: 16px;
+    overflow-x: hidden;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  nav.desktop-nav {
+    display: none;
+  }
+  nav.hamburger-nav {
+    display: block;
   }
 }
 
@@ -477,15 +487,6 @@ img {
   html,
   body {
     font-size: 14px;
-  }
-}
-
-@media only screen and (max-width: 1024px) {
-  nav.desktop-nav {
-    display: none;
-  }
-  nav.hamburger-nav {
-    display: block;
   }
 }
 
@@ -700,11 +701,12 @@ header .header-content {
 
 @media only screen and (max-width: 650px) {
   header .header-content {
-    padding-top: 15vh;
+    padding-top: 10vh;
     position: relative;
   }
-  header h1, header h2 {
-    background: rgba(232, 232, 232, 0.3);
+  header h1,
+  header h2 {
+    background: rgba(232, 232, 232, 0.5);
     padding: 0 10px;
   }
 }
@@ -806,6 +808,14 @@ section.about hr {
           justify-content: space-between;
 }
 
+.content span {
+  font-size: 24px;
+  font-size: 1.2rem;
+  line-height: 28px;
+  letter-spacing: 0.8px;
+  color: #a47b5b;
+}
+
 .my-skills h3 {
   text-align: center;
   margin: 10px 0;
@@ -847,7 +857,7 @@ section.about hr {
   height: 60px;
 }
 
-@media only screen and (max-width: 1400px) {
+@media only screen and (max-width: 1300px) {
   .my-skills {
     padding-bottom: 150px;
   }
@@ -862,24 +872,29 @@ section.about hr {
     padding-bottom: 110px;
   }
   .my-skills ul.skills-icon {
-    width: 60vw;
     margin: 0 auto;
   }
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 850px) {
   .split {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .about-me {
     padding-top: 50px;
     width: 100%;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .my-skills ul.skills-icon {
+    width: 70vw;
   }
 }
 
@@ -946,7 +961,7 @@ section.projects .inverted {
   }
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 850px) {
   section.projects ul li {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1007,7 +1022,7 @@ section.contact .socials li:hover {
           transform: scale(1.5);
 }
 
-i.fab {
+i.fab, i.far {
   font-size: 30px;
   font-size: 1.5rem;
   padding: 0 20px;

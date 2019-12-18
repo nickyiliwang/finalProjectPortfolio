@@ -2,26 +2,25 @@
   html,
   body {
     font-size: 16px;
+    overflow-x: hidden;
+  }
+}
+
+@include mq($max-width: 650px) {
+  // desktop nav
+  nav.desktop-nav {
+    display: none;
+  }
+
+  // hamburger nav
+  nav.hamburger-nav {
+    display: block;
   }
 }
 
 @include mq($max-width: 414px) {
-    html,
-    body {
-      font-size: 14px;
-    }
+  html,
+  body {
+    font-size: 14px;
   }
-
-  
-@include mq($max-width: 1024px) {
-    // desktop nav
-    nav.desktop-nav {
-      display: none;
-    }
-    
-    // hamburger nav
-    nav.hamburger-nav {
-      display: block;
-    }
-  }
-  
+}

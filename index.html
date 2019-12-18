@@ -153,22 +153,23 @@
 
               <h3>Nice to meet you, I'm...</h3>
               <p>
-                Nick (Yili) Wang, a front end developer based in Toronto. I am a
+                <span>Nick</span> (Yili) Wang, a front end developer based in Toronto. I am a
                 recent graduate of Juno (formerly HackerYou) College of
                 Technology.
               </p>
               <p>
-                Earning a Bachelor of Industrial Design from OCAD university
+                Earning a Bachelor of <span>Industrial Design</span> from OCAD university
                 gives me the perspective on user centered design, and the
-                ability to communicate effectively with other designers.
+                ability to <span>communicate</span> effectively with other designers.
               </p>
               <p>
-                Previously working in a team environment made me love the
-                feeling of collaboration to accomplish a common goal.
+                Previously working in a team environment made me
+                crave the feeling of <span>collaboration</span> to accomplish a common goal.
               </p>
               <p>
-                Beside coding, I love cats 🐱, video games 🎮, and have an ich
-                to always come up with cool ideas to amuse the people around me.
+                Beside coding, I love <span>cats</span> 🐱,
+                <span>video games</span> 🎮, and have an ich to always come up
+                with cool ideas to amuse the people around me.
               </p>
             </div>
             <!-- end of content -->
@@ -225,9 +226,6 @@
               </li>
               <li>
                 <img src="./assets/skills/sass.png" alt="sass logo" />
-              </li>
-              <li>
-                <img src="./assets/skills/vscode.png" alt="vsCode logo" />
               </li>
             </ul>
           </div>
@@ -442,6 +440,11 @@
             <input type="submit" value="Send" />
             <ul class="socials">
               <li>
+                <a href="mailto:nickyiliwang@gmail.com" target="_blank"
+                  ><i class="far fa-envelope"></i
+                ></a>
+              </li>
+              <li>
                 <a href="https://github.com/nickyiliwang" target="_blank"
                   ><i class="fab fa-github"></i
                 ></a>
@@ -486,39 +489,6 @@
     <!-- smoothScroll -->
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
     <!-- main script -->
-    <script>
-      AOS.init();
-
-      window.onscroll = function() {
-        scrollFunction();
-      };
-
-      const scrollFunction = () => {
-        if (
-          document.body.scrollTop > 80 ||
-          document.documentElement.scrollTop > 80
-        ) {
-          document.querySelector(".hamburger-nav").style.display = "block";
-        } else {
-          document.querySelector(".hamburger-nav").style.display = "none";
-        }
-      };
-
-      document.querySelectorAll(".menu a").forEach(tag => {
-        tag.addEventListener("click", () => {
-          document.querySelector("#toggle").checked = false;
-        });
-      });
-
-      const scroll = new SmoothScroll('a[href*="#"]');
-      const typed = new Typed("#typed", {
-        stringsElement: "#typed-strings",
-        typeSpeed: 50,
-        backSpeed: 25,
-        loop: true,
-        loopCount: Infinity,
-        smartBackspace: true
-      });
-    </script>
+    <script src="./script.js"></script>
   </body>
 </html>

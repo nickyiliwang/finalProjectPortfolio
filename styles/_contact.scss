@@ -27,7 +27,7 @@ section.contact {
   }
 }
 
-i.fab {
+i.fab, i.far {
   @include fontSize(30);
   padding: 0 20px;
   color: $primaryBlack;
