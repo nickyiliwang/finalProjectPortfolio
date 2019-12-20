@@ -21,6 +21,31 @@ AOS.init();
         });
       });
 
+      document.querySelector('.show-hide').addEventListener('click', () => {
+    
+
+// Hide an element
+var hide = function (elem) {
+	elem.style.display = 'none';
+};
+
+// Toggle element visibility
+var toggle = function (elem) {
+
+	// If the element is visible, hide it
+	if (window.getComputedStyle(elem).display === 'block') {
+		hide(elem);
+		return;
+	}
+
+	// Otherwise, show it
+	show(elem);
+
+};
+
+
+      })
+
       const scroll = new SmoothScroll('a[href*="#"]');
       const typed = new Typed("#typed", {
         stringsElement: "#typed-strings",

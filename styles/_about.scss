@@ -11,6 +11,12 @@ section.about {
     margin: 50px 0;
     border: 1px solid rgb(137, 123, 120);
   }
+
+  .arrows {
+    left: initial;
+    right: 50px;
+    bottom: 50px;
+  }
 }
 
 .split {
@@ -99,10 +105,6 @@ section.about {
     img {
       width: 60px;
       height: 60px;
-    }
-
-    #accessibility {
-      width: 100px;
     }
 
     p {

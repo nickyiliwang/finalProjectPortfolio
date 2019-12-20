@@ -746,6 +746,12 @@ section.about hr {
   border: 1px solid #897b78;
 }
 
+section.about .arrows {
+  left: initial;
+  right: 50px;
+  bottom: 50px;
+}
+
 .split {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -872,10 +878,6 @@ section.about hr {
 .my-skills ul.skills-icon img {
   width: 60px;
   height: 60px;
-}
-
-.my-skills ul.skills-icon #accessibility {
-  width: 100px;
 }
 
 .my-skills ul.skills-icon p {
@@ -1007,6 +1009,12 @@ section.projects .inverted {
   }
 }
 
+.show-hide,
+.thank-you,
+.hidden-content {
+  display: none;
+}
+
 section.contact {
   height: 100vh;
   padding: 50px 0;
@@ -1068,7 +1076,7 @@ form input,
 form textarea {
   background: none;
   border: none;
-  margin: 20px 10px;
+  margin: 15px 10px;
   padding: 20px;
 }
 
