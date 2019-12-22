@@ -8,7 +8,7 @@ nav.desktop-nav {
     cursor: pointer;
   }
 
-  .flexContainer {
+  .flex-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -167,5 +167,12 @@ nav.hamburger-nav {
       padding: 0;
       color: $primaryBackgroundGrey;
     }
+  }
+}
+
+@include mq($max-width: 650px) {
+  nav.hamburger-nav {
+    right: 50px;
+    top: 100px;
   }
 }

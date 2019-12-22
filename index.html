@@ -4,6 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="Description"
+      content="portfolio website for Nick (Yili) Wang, a front end web developer based in Toronto Canada."
+    />
+    <meta
+      name="keywords"
+      content="nick wang, front-end web-dev, web-development, portfolio, design, juno, hackerYou"
+    />
     <!-- favicon -->
     <link
       rel="apple-touch-icon"
@@ -44,10 +52,12 @@
     <header id="home">
       <!-- desktop-nav -->
       <nav class="desktop-nav">
-        <div class="wrapper flexContainer">
+        <!-- wrapper -->
+        <div class="wrapper flex-container">
           <div class="logo-icon">
             <h2 onClick="document.location.reload(true)">NW</h2>
           </div>
+          <!-- menu -->
           <div class="menu">
             <ul>
               <li><a href="#home">Home</a></li>
@@ -56,11 +66,14 @@
               <li><a href="#contact">Contact</a></li>
             </ul>
           </div>
+          <!-- end of menu -->
         </div>
+        <!-- end of wrapper flex-container -->
       </nav>
       <!-- end of desktop-nav -->
       <!-- hamburger-nav -->
       <nav aria-hidden="true" class="hamburger-nav">
+        <!-- wrapper -->
         <div class="wrapper">
           <div class="menuToggle">
             <input type="checkbox" id="toggle" name="toggle" />
@@ -68,10 +81,12 @@
             <span></span>
             <span></span>
             <ul class="menu">
+              <!-- nav -->
               <li><a href="#home">Home</a></li>
               <li><a href="#about">About Me</a></li>
               <li><a href="#projects">Projects</a></li>
               <li><a href="#contact">Contact</a></li>
+              <!-- socials -->
               <li>
                 <a href="https://github.com/nickyiliwang" target="_blank"
                   >Github <i class="fab fa-github"></i>
@@ -99,11 +114,14 @@
             </ul>
           </div>
         </div>
+        <!-- end of wrapper -->
       </nav>
       <!-- end of hamburger-nav -->
+      <!-- wrapper -->
       <div class="wrapper">
         <div class="header-content">
           <h1>Hello! I'm Nick,</h1>
+          <!-- typedJs -->
           <h2>
             <div id="typed-strings">
               <p>a Web developer</p>
@@ -113,8 +131,8 @@
             </div>
             <span id="typed"></span>
           </h2>
+          <!-- end of typedJs -->
         </div>
-
         <!-- scroll down arrow -->
         <a href="#main-content">
           <svg class="arrows bounce">
@@ -124,6 +142,7 @@
           </svg>
         </a>
       </div>
+      <!-- end of wrapper -->
     </header>
     <!-- end of header -->
     <!-- main -->
@@ -333,10 +352,10 @@
                   Router |
                 </p>
                 <p>
-                  This app is created by a team of 4. With this App you can create/select an
-                  event want to attend this week, but ditch that event and watch
-                  an amazing Tv show we recommend. Created using 2 different
-                  APIS and firebase.
+                  This app is created by a team of 4. With this App you can
+                  create/select an event want to attend this week, but ditch
+                  that event and watch an amazing Tv show we recommend. Created
+                  using 2 different APIS and firebase.
                 </p>
                 <div class="external-link">
                   <a
@@ -429,73 +448,83 @@
           <p class="thank-you">Thank you for taking an interest ! 😸</p>
           <!-- extra content -->
           <ul class="hidden-content">
-          <!-- Catsby: Social media -->
-          <li>
-            <div class="image-container">
-              <a
-                href="https://social-media-66682.firebaseapp.com/"
-                target="_blank"
-                ><img
-                  src="./assets/projects/catsby.png"
-                  alt="Code Along: Social Media Clone"
-              /></a>
-            </div>
-            <div class="content-container inverted" data-aos="fade-left">
-              <h3>Code Along: Social Media Clone</h3>
-              <p>React | React Router | Redux | Firebase | Cloud Firestore | Material UI | NodeJs | </p>
-              <p>
-                This is a fullstack social media clone app called Catsby, which is an app derived and guided from a course taught by Ahmed Hadjou.
-              </p>
-              <div class="external-link">
+            <!-- Catsby: Social media -->
+            <li>
+              <div class="image-container">
                 <a
-                  class="button"
                   href="https://social-media-66682.firebaseapp.com/"
                   target="_blank"
-                  >View Live</a
-                >
-                <a
-                  class="button"
-                  href="https://github.com/nickyiliwang/Catsby-social-media-React-Redux-FullStack"
-                  target="_blank"
-                  >Github Repo</a
-                >
+                  ><img
+                    src="./assets/projects/catsby.png"
+                    alt="Code Along: Social Media Clone"
+                /></a>
               </div>
-            </div>
-          </li>
-          <!-- Giphtionary -->
-          <li>
-            <div class="image-container">
-              <a
-                href="https://nickyiliwang.github.io/Giphtionary/"
-                target="_blank"
-                ><img
-                  src="./assets/projects/giphtionary.png"
-                  alt="Giphtionary !"
-              /></a>
-            </div>
-            <div class="content-container inverted" data-aos="fade-left">
-              <h3>Giphtionary !</h3>
-              <p>React | React Router | Redux | Firebase | Cloud Firestore | Material UI | NodeJs | </p>
-              <p>
-                This is a fullstack social media clone app called Catsby, which is an app derived and guided from a course taught by Ahmed Hadjou.
-              </p>
-              <div class="external-link">
-                <a
-                  class="button"
-                  href="https://social-media-66682.firebaseapp.com/"
-                  target="_blank"
-                  >View Live</a
-                >
-                <a
-                  class="button"
-                  href="https://github.com/nickyiliwang/Giphtionary"
-                  target="_blank"
-                  >Github Repo</a
-                >
+              <div class="content-container inverted" data-aos="fade-left">
+                <h3>Code Along: Social Media Clone</h3>
+                <p>
+                  React | React Router | Redux | Firebase | Cloud Firestore |
+                  Material UI | NodeJs |
+                </p>
+                <p>
+                  This is a fullstack social media clone app called Catsby,
+                  which is an app derived and guided from a course taught by
+                  Ahmed Hadjou.
+                </p>
+                <div class="external-link">
+                  <a
+                    class="button"
+                    href="https://social-media-66682.firebaseapp.com/"
+                    target="_blank"
+                    >View Live</a
+                  >
+                  <a
+                    class="button"
+                    href="https://github.com/nickyiliwang/Catsby-social-media-React-Redux-FullStack"
+                    target="_blank"
+                    >Github Repo</a
+                  >
+                </div>
               </div>
-            </div>
-          </li>
-        </ul>
+            </li>
+            <!-- Giphtionary -->
+            <li>
+              <div class="image-container">
+                <a
+                  href="https://nickyiliwang.github.io/Giphtionary/"
+                  target="_blank"
+                  ><img
+                    src="./assets/projects/giphtionary.png"
+                    alt="Giphtionary !"
+                /></a>
+              </div>
+              <div class="content-container inverted" data-aos="fade-left">
+                <h3>Giphtionary !</h3>
+                <p>
+                  React | React Router | Redux | Firebase | Cloud Firestore |
+                  Material UI | NodeJs |
+                </p>
+                <p>
+                  This is a fullstack social media clone app called Catsby,
+                  which is an app derived and guided from a course taught by
+                  Ahmed Hadjou.
+                </p>
+                <div class="external-link">
+                  <a
+                    class="button"
+                    href="https://social-media-66682.firebaseapp.com/"
+                    target="_blank"
+                    >View Live</a
+                  >
+                  <a
+                    class="button"
+                    href="https://github.com/nickyiliwang/Giphtionary"
+                    target="_blank"
+                    >Github Repo</a
+                  >
+                </div>
+              </div>
+            </li>
+          </ul>
         </div>
         <!-- end of wrapper -->
         <!-- scroll down arrow -->
@@ -511,7 +540,7 @@
       <!-- end of projects section -->
       <!-- contact -->
       <section class="contact" id="contact">
-        <div class="wrapper flexContainer">
+        <div class="wrapper flex-container">
           <h2>Contact</h2>
           <form
             action="
