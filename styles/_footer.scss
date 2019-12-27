@@ -1,6 +1,11 @@
 footer {
-    background: $primaryBlack;
+  background: $primaryBlack;
+  color: $primaryWhite;
+  padding: 10px;
+  text-align: center;
+
+  a {
     color: $primaryWhite;
-    padding: 10px;
-    text-align: center;
+    text-decoration: underline;
+  }
 }

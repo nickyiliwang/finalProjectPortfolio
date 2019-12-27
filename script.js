@@ -1,57 +1,52 @@
+// anime on scroll
 AOS.init();
 
-      window.onscroll = function() {
-        scrollFunction();
-      };
-
-      const scrollFunction = () => {
-        if (
-          document.body.scrollTop > 80 ||
-          document.documentElement.scrollTop > 80
-        ) {
-          document.querySelector(".hamburger-nav").style.display = "block";
-        } else {
-          document.querySelector(".hamburger-nav").style.display = "none";
-        }
-      };
-
-      document.querySelectorAll(".menu a").forEach(tag => {
-        tag.addEventListener("click", () => {
-          document.querySelector("#toggle").checked = false;
-        });
-      });
-
-      document.querySelector('.show-hide').addEventListener('click', () => {
-    
-
-// Hide an element
-var hide = function (elem) {
-	elem.style.display = 'none';
+// show/hide hamburger menu
+window.onscroll = function() {
+  scrollFunction();
 };
 
-// Toggle element visibility
-var toggle = function (elem) {
+// DOM selects
+const showHide = document.querySelector(".show-hide");
+const hiddenContent = document.querySelector(".hidden-content");
+// hiding extra content
+hiddenContent.style.display = "none";
 
-	// If the element is visible, hide it
-	if (window.getComputedStyle(elem).display === 'block') {
-		hide(elem);
-		return;
-	}
-
-	// Otherwise, show it
-	show(elem);
-
+// if the user scroll pass the header, top nav goes away replaced by hamburger nav
+const scrollFunction = () => {
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    document.querySelector(".hamburger-nav").style.display = "block";
+  } else {
+    document.querySelector(".hamburger-nav").style.display = "none";
+  }
 };
 
+// clicking on a a tag in hamburger will close the hamburger slide
+document.querySelectorAll(".menu a").forEach(tag => {
+  tag.addEventListener("click", () => {
+    document.querySelector("#toggle").checked = false;
+  });
+});
 
-      })
+// show and hide extra projects
+showHide.addEventListener("click", () => {
+  if (hiddenContent.style.display === "none") {
+    hiddenContent.style.display = "block";
+    showHide.textContent = "Read Less";
+  } else {
+    hiddenContent.style.display = "none";
+    showHide.textContent = "Would you like more ?";
+  }
+});
 
-      const scroll = new SmoothScroll('a[href*="#"]');
-      const typed = new Typed("#typed", {
-        stringsElement: "#typed-strings",
-        typeSpeed: 50,
-        backSpeed: 25,
-        loop: true,
-        loopCount: Infinity,
-        smartBackspace: true
-      });
+// smooth scroll
+const scroll = new SmoothScroll('a[href*="#"]');
+// typed js
+const typed = new Typed("#typed", {
+  stringsElement: "#typed-strings",
+  typeSpeed: 50,
+  backSpeed: 25,
+  loop: true,
+  loopCount: Infinity,
+  smartBackspace: true
+});
